@@ -1,0 +1,38 @@
+.hero {
+  background-color: $gray-light;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    &__text {
+    max-width: 541px;
+    width: 100%;
+    margin-bottom: 24px;
+      & h1 {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 52px;
+      }
+      & p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 31px;
+      }
+    }
+     
+  &__btn {
+    display: flex;
+    justify-content: left;
+    & a {
+      background-color: $accent-color;
+      color: $white;
+      border-radius: 8px;
+      padding: 16px 40px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

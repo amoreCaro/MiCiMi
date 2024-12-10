@@ -1,0 +1,51 @@
+.header {
+  background-color: $white;
+  padding: 30px 0px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    height: auto;
+    max-width: 113px;
+    width: 100%;
+    & svg {
+      width: 100%;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    max-width: 409px;
+    width: 100%;
+
+    ul {
+        position: relative;
+        left: 16px;
+    
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 32px;
+    }
+    a {
+      display: flex;
+      align-items: center; /* Vertically align icon and text */
+      text-decoration: none;
+      color: $black;
+    }
+    svg {
+      margin-left: 8px;
+    }
+  }
+  &__btn {
+    max-width: 147px;
+    width: 100%;    
+    background-color: $accent-color;
+    color: $white;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+
+  }
+}

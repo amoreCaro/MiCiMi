@@ -1,0 +1,33 @@
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__container {
+  }
+  &__content {
+    gap: 32px;
+  }
+  &__text {
+    max-width: 932px;
+    & p {
+      margin-bottom: 32px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    & a {
+      background-color: $accent-color;
+      color: $white;
+      border-radius: 8px;
+      padding: 16px 40px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

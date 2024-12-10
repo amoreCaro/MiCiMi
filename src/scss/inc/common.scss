@@ -7,6 +7,7 @@ body {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: "Urbanist", sans-serif;
 }
 
 * {
@@ -58,40 +59,26 @@ img:hover {
 }
 
 .section {
-    padding: 40px 0;
-    width: 100%; 
-}
+    border: 1px solid red;
+    margin: 150px 0;
+    width: 100%;
+    
+    &:first-child {
+      margin-top: 30px ;
+    }
+    
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    
+    // Add padding to prevent collapsing margins
+    padding-top: 1px;
+  }
+  
+
 .container {
-    // padding: 0 32px;
+    border: 1px solid #00f;
     margin: 0 auto;
-    max-width: 1440px;
-}
-@media (min-width: 1024px) {
-    .container {
-        padding: 0 32px;
-    }
-    .section {
-        padding: 16px 0 !important; 
-     }
-}
-
-@media (max-width: 1024px) {
-    .container {
-        padding: 0 16px !important;
-    }
-    .section {
-        padding: 16px 0 !important; 
-     }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 16px;
-    }
-}
-
-@media (max-width: 425px) {
-    .container {
-        padding: 0 8px;
-    }
+    width: calc(100% - 30px); 
+    max-width: 1380px;
 }

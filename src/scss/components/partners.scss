@@ -1,0 +1,17 @@
+.partners {
+    background-color: $gray-light;  
+    &__container {
+    }
+    &__content h2 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 43px;
+        margin-bottom: 60px;
+    }
+    &__grid {
+        display: grid;  
+        grid-template-columns: repeat(4, 1fr);  
+        gap: 24px; 
+    }
+}
+

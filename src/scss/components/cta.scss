@@ -1,0 +1,40 @@
+.cta {
+    &__container {
+        background-image: url(../../img/cta/cta-decor.svg);
+        background-size: cover; // Забезпечує покриття всього блоку
+        background-repeat: no-repeat; // Запобігає повторенню зображення
+        background-position: center; // Вирівнює зображення по центру
+        width: 100%; 
+        background-color: $gray-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+      &__text {
+      max-width: 541px;
+      width: 100%;
+      margin-bottom: 24px;
+        & h1 {
+          margin-bottom: 40px;
+          font-weight: 400;
+          font-size: 48px;
+          line-height: 52px;
+        }
+      }
+       
+    &__btn {
+      display: flex;
+      justify-content: left;
+      & a {
+        background-color: $accent-color;
+        color: $white;
+        border-radius: 8px;
+        padding: 16px 40px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+}
+  
