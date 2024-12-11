@@ -1,6 +1,7 @@
 .hero {
-  background-color: $gray-light;
   &__container {
+    background-color: $gray-light;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
