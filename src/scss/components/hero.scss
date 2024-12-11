@@ -6,9 +6,9 @@
     align-items: center;
   }
     &__text {
-    max-width: 541px;
+    max-width: 540px;
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
       & h1 {
         margin-bottom: 8px;
         font-weight: 500;
@@ -23,13 +23,15 @@
     }
      
   &__btn {
+    position: relative;
+    margin-bottom: 12px;
     display: flex;
     justify-content: left;
     & a {
       background-color: $accent-color;
       color: $white;
       border-radius: 8px;
-      padding: 16px 40px;
+      padding: 16px 48px;
       font-weight: 600;
       font-size: 16px;
       line-height: 19px;
