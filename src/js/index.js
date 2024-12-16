@@ -1,10 +1,7 @@
-import hero from './components/hero';
-import setupMegaMenu from "./components/setupMegaMenu";
-import toggleMenuVisibility from "./components/toggleMenuVisibility";
-
+// import hero from './components/hero';
+import sidebarLogic from './components/sidebarLogic';
 
 document.addEventListener("DOMContentLoaded", function() {
-    hero();
-    setupMegaMenu();
-    toggleMenuVisibility();
+    // hero();
+    sidebarLogic();
 });

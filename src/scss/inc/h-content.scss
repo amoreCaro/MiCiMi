@@ -1,0 +1,101 @@
+.h-content {
+  & h1 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    color: $black;
+    margin: 8px 0px;
+  }
+
+  & h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 43px;
+    color: $black;
+    margin: 60px 0px;
+  }
+
+  & h3 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 43px;
+    color: $black;
+    margin: 12px 0px;
+  }
+
+  & h3 {
+    color: $black;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 12px 0px;
+  }
+  & p {
+    font-size: 24px;
+    line-height: 42px;
+    color: $black;
+    & b {
+        color: $accent-color;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    & i {
+        font-style: italic;
+    }
+  }
+
+  & a {
+    color: $accent-color;
+    text-decoration: underline;
+    font-size: 24px;
+    line-height: 42px;
+  }
+  & figure {
+    margin-bottom: 16px;
+    & picture {
+      display: block;
+      width: 100%;
+      & img {
+        display: block;
+        width: 100%;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  li {
+    gap: 12px;
+    color: $text-color;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 32px 0px;
+    &::marker {
+      color: $accent-color;
+    }
+  }
+  & blockquote {
+    & p {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 42px;
+      color: $accent-color;
+      margin: 32px 0px;
+    }
+    & span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $text-color;
+      & a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: underline;
+        color: $text-color;
+      }
+    }
+  }
+}
