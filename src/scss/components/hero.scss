@@ -114,6 +114,11 @@
     }
   }
 }
+@media screen and (max-width: 425px) {
+  .hero {
+    margin-top: 120px !important;
+  }
+}
 @media screen and (max-width: 375px) {
   .hero__content {
     margin-top: 220px;
