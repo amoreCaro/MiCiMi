@@ -21,6 +21,7 @@ button {
     padding: 16px 40px;
     &:hover {
       background-color: #3c66b5;
+      transition: $transition;
     }
   }
 }

@@ -85,12 +85,9 @@
     }
     li {
       position: relative;
-      
-
     }
     li:first-child:hover .header__mega-menu {
-      // display: block;
-      opacity: 1; /* Показуємо меню */
+      opacity: 1;
       visibility: visible; 
     }
     a {
@@ -98,6 +95,10 @@
       align-items: center;
       text-decoration: none;
       color: $black;
+      &:hover {
+        color: $accent-color;
+        transition: $transition;
+      }
     }
     svg {
       margin-left: 8px;
@@ -113,6 +114,7 @@
     text-transform: uppercase;
     &:hover {
       background-color: #3c66b5;
+      transition: $transition;
     }
   }
   &__menu {
