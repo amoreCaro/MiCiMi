@@ -1,7 +1,7 @@
-// import hero from './components/hero';
+import news from './components/news';
 import sidebarLogic from './components/sidebarLogic';
 
 document.addEventListener("DOMContentLoaded", function() {
-    // hero();
+    news();
     sidebarLogic();
 });
