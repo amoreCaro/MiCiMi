@@ -1,5 +1,5 @@
 <div id="sidebar1" class="sidebar">
-  <div class="sidebar__content">
+
     <button class="closeSidebarBtn btn">
       <svg
         width="32"
@@ -17,53 +17,65 @@
         />
       </svg>
     </button>
+    <div class="sidebar__content">
     <p>Menu</p>
     <div class="sidebar__list">
       <ul>
-        <li>
+        <li class="dropdown">
           <a href="#">Services</a>
+          <!-- <ul class="dropdown-menu">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">SEO</a></li>
+          </ul> -->
         </li>
-        <li>
+        <li class="dropdown">
           <a href="#">Project</a>
+          <!-- <ul class="dropdown-menu">
+            <li><a href="#">Ongoing Projects</a></li>
+            <li><a href="#">Completed Projects</a></li>
+          </ul> -->
         </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">News</a>
-        </li>
-        <li>
-          <a href="#">Careers</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
+    
     <div class="sidebar__socials">
-      <li>
-        <a href="#">
-          <img src="../../img/facebook.svg" alt="" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="../../img/X.svg" alt="" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="../../img/linkedIn.svg" alt="" />
-        </a>
-      </li>
+      <div class="sidebar__socials-item">
+        <li>
+          <a href="#">
+            <img src="./img/facebook.svg" alt="Facebook Icon"/>
+          </a>
+        </li>
+      </div>
+      <div class="sidebar__socials-item">
+        <li>
+          <a href="#">
+            <img src="./img/X.svg" alt="X Icon" />
+          </a>
+        </li>
+      </div>
+      <div class="sidebar__socials-item">
+        <li>
+          <a href="#">
+            <img src="./img/linkedIn.svg" alt="linkedIn Icon"/>
+          </a>
+        </li>
+      </div>
     </div>
     <div class="sidebar__bottom">
       <p>Get in Touch</p>
       <div class="sidebar__bottom-info">
-        <a href="#">
-          <p>hellomicimi@gmail.com</p>
-        </a>
-        <p>201 Borough High Street, London SE1 1JA, Company number: 3936157</p>
+        
+        <span>
+          <a href="#">
+            hellomicimi@gmail.com 201 
+          </a>  <br>
+          Borough High Street, London SE1 1JA, Company number: 3936157
+        </span>
       </div>
     </div>
   </div>

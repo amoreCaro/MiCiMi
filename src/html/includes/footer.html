@@ -74,6 +74,23 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="js/bundle.js"></script>
+<script>
+      const dropdowns = document.querySelectorAll('.dropdown > a');
+
+// Loop through each dropdown and add click event
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', function(event) {
+    // Prevent the link from navigating
+    event.preventDefault();
+    
+    // Get the associated dropdown menu
+    const menu = this.nextElementSibling;
+
+    // Toggle the visibility of the dropdown menu
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  });
+});
+</script>
 
 </body>
 </html>
