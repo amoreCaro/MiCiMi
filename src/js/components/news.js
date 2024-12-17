@@ -1,21 +1,28 @@
 export default function news() {
   return new Swiper(".news__slider", {
-    // spaceBetween: 30, // Space between slides
-    slidesPerView: 3, // Show 3 slides at once
+    slidesPerView: 3,
     autoplay: {
-      delay: 2500, // Delay for autoplay
-      disableOnInteraction: false, // Keeps autoplay after interaction
+      delay: 2500,
+      disableOnInteraction: false,
     },
     navigation: {
-      nextEl: ".swiper-button-next", // Next button
-      prevEl: ".swiper-button-prev", // Previous button
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination", // Pagination container
-      clickable: true, // Makes pagination clickable
+      el: ".swiper-pagination",
+      clickable: true,
     },
     breakpoints: {
-
+      1440: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
     },
   });
 }
