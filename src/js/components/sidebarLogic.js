@@ -3,6 +3,8 @@ export default function sidebarLogic() {
   const openSidebarBtns = document.querySelectorAll('.openSidebarBtn');
   const closeSidebarBtns = document.querySelectorAll('.closeSidebarBtn');
   const overlay = document.querySelector('.overlay');
+  const menuToggle = document.querySelectorAll('.toggle-sidebar');
+  const extraSidebars = document.querySelectorAll('.extra-sidebar');
 
   // Check if overlay exists
   if (!overlay) {
@@ -53,4 +55,23 @@ export default function sidebarLogic() {
       overlay.classList.remove('active'); // Hide the overlay
     }
   }
+
+  // Додаємо подію на кожну кнопку меню
+  menuToggle.forEach(button => {
+    button.addEventListener('click', (event) => {
+      // Отримуємо значення атрибуту data-nav
+      const targetSidebarId = event.target.getAttribute('data-nav');
+
+      // Знаходимо відповідний сайдбар
+      const targetSidebar = document.getElementById(targetSidebarId);
+
+      // Перевіряємо, чи цей сайдбар вже відкритий
+      if (targetSidebar) {
+        // Перемикаємо клас active на конкретному сайдбарі
+        targetSidebar.classList.toggle('active');
+      }
+    });
+  });
 }
+
+

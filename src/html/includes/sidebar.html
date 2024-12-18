@@ -1,48 +1,37 @@
 <div id="sidebar1" class="sidebar">
-
-    <button class="closeSidebarBtn btn">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M21.6575 10.3438L10.3438 21.6575M21.6575 21.6575L10.3438 10.3438"
-          stroke="#2D56A3"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </button>
-    <div class="sidebar__content">
+  <button class="closeSidebarBtn btn">
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21.6575 10.3438L10.3438 21.6575M21.6575 21.6575L10.3438 10.3438"
+        stroke="#2D56A3"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+  <div class="sidebar__content">
     <p>Menu</p>
     <div class="sidebar__list">
-      <ul>
-        <li class="dropdown">
-          <a href="#">Services</a>
-        </li>
-        <li class="dropdown">
-          <a href="#">Project</a>
-          <!-- <ul class="dropdown-menu">
-            <li><a href="#">Ongoing Projects</a></li>
-            <li><a href="#">Completed Projects</a></li>
-          </ul> -->
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="toggle-sidebar" data-nav="sidebar-nav--services" href="#">Services</a></li>
+        <li><a class="toggle-sidebar" data-nav="sidebar-nav--projects" href="#">Projects</a></li>
+        <li><a class="toggle-sidebar" data-nav="sidebar-nav--about" href="#">About</a></li>
+        <li><a class="toggle-sidebar" data-nav="sidebar-nav--news" href="#">News</a></li>
+        <li><a class="toggle-sidebar" data-nav="sidebar-nav--careers" href="#">Careers</a></li>
+        <li><a class="toggle-sidebar" data-nav="sidebar-nav--contact" href="#">Contact</a></li>
       </ul>
     </div>
-    
     <div class="sidebar__socials">
       <div class="sidebar__socials-item">
         <li>
           <a href="#">
-            <img src="./img/facebook.svg" alt="Facebook Icon"/>
+            <img src="./img/facebook.svg" alt="Facebook Icon" />
           </a>
         </li>
       </div>
@@ -56,7 +45,7 @@
       <div class="sidebar__socials-item">
         <li>
           <a href="#">
-            <img src="./img/linkedIn.svg" alt="linkedIn Icon"/>
+            <img src="./img/linkedIn.svg" alt="linkedIn Icon" />
           </a>
         </li>
       </div>
@@ -64,15 +53,64 @@
     <div class="sidebar__bottom">
       <p>Get in Touch</p>
       <div class="sidebar__bottom-info">
-        
         <span>
-          <a href="#">
-            hellomicimi@gmail.com 201 
-          </a>  <br>
+          <a href="#"> hellomicimi@gmail.com 201 </a> <br />
           Borough High Street, London SE1 1JA, Company number: 3936157
         </span>
       </div>
     </div>
+  </div>
+</div>
+<div class="sidebar extra-sidebar" id="sidebar-nav--about">
+  <button class="closeSidebarBtn btn">
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21.6575 10.3438L10.3438 21.6575M21.6575 21.6575L10.3438 10.3438"
+        stroke="#2D56A3"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+  <div class="sidebar__list">
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Team</a></li>
+      <li><a href="#">Company History</a></li>
+    </ul>
+  </div>
+</div>
+<div class="sidebar extra-sidebar" id="sidebar-nav--services">
+  <button class="closeSidebarBtn btn">
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21.6575 10.3438L10.3438 21.6575M21.6575 21.6575L10.3438 10.3438"
+        stroke="#2D56A3"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+  <div class="sidebar__list">
+    <ul>
+      <li><a href="#">fdvjndfjhvbdfhjvdfhv</a></li>
+      <li><a href="#">Our Team</a></li>
+      <li><a href="#">Company History</a></li>
+    </ul>
   </div>
 </div>
 <div class="overlay"></div>
