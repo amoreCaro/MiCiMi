@@ -27,6 +27,28 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background: $gray-light;
+          border-radius: 50%;
+          box-shadow: -10px -10px 0 $white;
+          top: 84px;
+          left: 0px;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background: $gray-light;
+          border-radius: 50%;
+          box-shadow: -10px -10px 0 $white;
+          top: 0px;
+          left: 84px;
+        }
         & svg {
           position: absolute;
           z-index: 1;
