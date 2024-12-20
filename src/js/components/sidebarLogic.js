@@ -1,77 +1,40 @@
 export default function sidebarLogic() {
-  // Get all buttons that open the sidebar
-  const openSidebarBtns = document.querySelectorAll('.openSidebarBtn');
-  const closeSidebarBtns = document.querySelectorAll('.closeSidebarBtn');
-  const overlay = document.querySelector('.overlay');
+  const sidebar = $('.sidebar');
+  const openModal = $('.openModal');
+  const closeModal = $('.closeModal');
+  const overlay = $('.overlay');
 
-  const hasDropdown = document.querySelectorAll('.has-dropdown');
-  const items = document.querySelector('.dropdown__items');
-  const back = document.querySelector('.dropdown__item-back');
+  const hasChildren = $('.has-children');
+  const items = $('.dropdown__items');
+  const back = $('.dropdown__item-back');
 
-  // Check if overlay exists
-  if (!overlay) {
+  if (overlay.length === 0) {
     console.error('Overlay element not found');
     return;
   }
 
-  // Open sidebar logic
-  openSidebarBtns.forEach(button => {
-    button.addEventListener('click', () => {
-      const sidebarId = button.dataset.sidebarTarget; // Get the sidebar selector (ID) from data-attribute
-      const sidebar = document.querySelector(sidebarId); // Find the sidebar using querySelector
+  openModal.on('click', function () {
+    const sidebarId = $(this).data('sidebarTarget');
 
-      if (sidebar) {
-        openSidebar(sidebar); // Open the sidebar
-      } else {
-        console.error(`Sidebar with selector "${sidebarId}" not found`);
-      }
-    });
-  });
-
-  // Close sidebar logic
-  closeSidebarBtns.forEach(button => {
-    button.addEventListener('click', () => {
-      const sidebar = button.closest('.sidebar'); // Find the closest sidebar element
-      closeSidebar(sidebar); // Close the sidebar
-    });
-  });
-
-  // Close sidebar when clicking on overlay (background dimming)
-  overlay.addEventListener('click', () => {
-    const activeSidebar = document.querySelector('.sidebar.active'); // Find the active sidebar
-    if (activeSidebar) {
-      closeSidebar(activeSidebar); // Close the active sidebar
+    if (sidebarId) {
+      $(sidebarId).addClass('active');
     }
   });
 
-  // Function to open sidebar
-  function openSidebar(sidebar) {
-    sidebar.classList.add('active'); // Add "active" class to show the sidebar
-    overlay.classList.add('active'); // Show the overlay
-  }
+  closeModal.on('click', function () {
+    console.log("click");
+    sidebar.removeClass('active');
+  });
 
-  // Function to close sidebar
-  function closeSidebar(sidebar) {
-    if (sidebar) {
-      sidebar.classList.remove('active'); // Remove "active" class to hide the sidebar
-      overlay.classList.remove('active'); // Hide the overlay
+  hasChildren.on('click', function () {
+    const submenu = $(this).find('.submenu');
+
+    if (submenu.length) {
+      submenu.toggleClass('show');
     }
-  }
+  });
 
-  
-
-
-
-  // hasDropdown.forEach(button => {
-  //   button.addEventListener('click', () => {
-  //     items.classList.toggle('active');
-  //   });
-  // });
-
-
-  // back.addEventListener('click', () => {
-  //   items.classList.remove('active');
-  //   items.classList.add('h-animation-right');
-  // });
-
+  back.on('click', function () {
+    items.removeClass('show').addClass('h-animation-right');
+  });
 }

@@ -18,10 +18,7 @@
     opacity: 0;
     border-radius: 8px;
     z-index: 100;
-    -webkit-box-shadow: 0px -1px 8px 1px rgba(0, 0, 0, 0.54);
-    -moz-box-shadow: 0px -1px 8px 1px rgba(0, 0, 0, 0.54);
-    box-shadow: 0px -1px 8px 1px rgba(0, 0, 0, 0.54);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 0px 9px 0px rgba(45, 86, 163, 0.1);
 
     &-wrapper {
       padding: 20px 12px;
@@ -53,9 +50,8 @@
             margin-top: 12px; /* Відступ зверху */
             color: $text-color;
             border-top: 1px solid;
-
           }
-  
+
           ul:not(:last-of-type) {
             margin-bottom: 12px; /* Відступ знизу */
             color: $text-color;
@@ -114,6 +110,10 @@
     }
     li {
       position: relative;
+      &:hover svg {
+        transition: $transition;
+        // transform: rotate(180deg);  
+      } 
     }
     li:first-child:hover .header__mega-menu {
       opacity: 1;
@@ -128,24 +128,15 @@
         color: $accent-color;
         transition: $transition;
       }
+      
     }
     svg {
       margin-left: 8px;
+      &:hover {
+        fill: red;
+      }
     }
   }
-  // &__btn {
-  //   max-width: 147px;
-  //   width: 100%;
-  //   background-color: $accent-color;
-  //   color: $white;
-  //   border-radius: 8px;
-  //   padding: 12px 24px;
-  //   text-transform: uppercase;
-  //   &:hover {
-  //     background-color: #3c66b5;
-  //     transition: $transition;
-  //   }
-  // }
   &__menu {
     display: none;
   }

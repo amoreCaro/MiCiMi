@@ -8,6 +8,7 @@
   right: 0;
   z-index: 1001;
   background-color: $gray-light;
+  overflow: hidden;
   &__content {
     margin-top: 62px;
     margin-left: 26px;
@@ -81,7 +82,7 @@
   position: relative;
 }
 
-.dropdown__item {
+.submenu-item {
   display: flex;       
   align-items: center;  
   &-back {
@@ -91,7 +92,7 @@
     color: $text-color !important;
   }
 }
-.dropdown__items{
+.submenu {
   width: 100%;
   transform: translate(-50px, 0px);
   position: absolute;
@@ -99,18 +100,18 @@
   top: 0;
   z-index: -1;
 }
-
-.h-animation-left{
-   transform: translate(350px, 0px);
-   transition:  1s;
-}
-.dropdown__items.active{
+.submenu.show {
   overflow-y: auto;
   height: 100vh;
   z-index: 99;
   background: $gray-light;
   transform: translate(0px, 0px);
   transition: transform 1s;
+}
+
+.h-animation-left{
+   transform: translate(-350px, 0px);
+   transition:  1s;
 }
 
 .overlay {
@@ -126,7 +127,7 @@
   backdrop-filter: blur(34px);
   
 }
-.closeSidebarBtn {
+.closeModal {
   position: absolute;
   right: 30px;
   top: 36px;
