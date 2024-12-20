@@ -24,7 +24,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 
     &-wrapper {
-      padding: 42px 12px;
+      padding: 20px 12px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -34,19 +34,36 @@
         line-height: 24px;
         margin-bottom: 18px;
       }
-      & ul {
+      ul {
         display: block;
+        margin: 24px 0px;
+
         &:not(:first-of-type):before {
+          padding: 24px 0; /* Встановлює відступ зверху та знизу */
           content: "";
           position: absolute;
-          top: -4px;
+          top: -4px; /* Розташування роздільника */
           left: 0;
           width: 95%;
           border-top: 1px solid;
           display: block;
           color: $text-color;
+          transform: translateY(-50%);
+          ul:not(:first-of-type) {
+            margin-top: 12px; /* Відступ зверху */
+            color: $text-color;
+            border-top: 1px solid;
+
+          }
+  
+          ul:not(:last-of-type) {
+            margin-bottom: 12px; /* Відступ знизу */
+            color: $text-color;
+            border-top: 1px solid;
+          }
         }
       }
+
       & a {
         justify-content: space-between;
         max-width: 517px;
@@ -57,6 +74,7 @@
     }
   }
   &__container {
+    align-items: center;
     display: flex;
     justify-content: space-between;
   }
@@ -82,6 +100,9 @@
     justify-content: center;
     max-width: 409px;
     width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
 
     ul {
       position: relative;
@@ -112,19 +133,19 @@
       margin-left: 8px;
     }
   }
-  &__btn {
-    max-width: 147px;
-    width: 100%;
-    background-color: $accent-color;
-    color: $white;
-    border-radius: 8px;
-    padding: 12px 24px;
-    text-transform: uppercase;
-    &:hover {
-      background-color: #3c66b5;
-      transition: $transition;
-    }
-  }
+  // &__btn {
+  //   max-width: 147px;
+  //   width: 100%;
+  //   background-color: $accent-color;
+  //   color: $white;
+  //   border-radius: 8px;
+  //   padding: 12px 24px;
+  //   text-transform: uppercase;
+  //   &:hover {
+  //     background-color: #3c66b5;
+  //     transition: $transition;
+  //   }
+  // }
   &__menu {
     display: none;
   }
@@ -146,8 +167,6 @@
     left: 0;
     right: 0;
     width: 100%;
-
-
     z-index: 1000;
   }
 }

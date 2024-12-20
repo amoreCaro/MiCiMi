@@ -3,8 +3,10 @@ export default function sidebarLogic() {
   const openSidebarBtns = document.querySelectorAll('.openSidebarBtn');
   const closeSidebarBtns = document.querySelectorAll('.closeSidebarBtn');
   const overlay = document.querySelector('.overlay');
-  const menuToggle = document.querySelectorAll('.toggle-sidebar');
-  const extraSidebars = document.querySelectorAll('.extra-sidebar');
+
+  const hasDropdown = document.querySelectorAll('.has-dropdown');
+  const items = document.querySelector('.dropdown__items');
+  const back = document.querySelector('.dropdown__item-back');
 
   // Check if overlay exists
   if (!overlay) {
@@ -56,22 +58,14 @@ export default function sidebarLogic() {
     }
   }
 
-  // Додаємо подію на кожну кнопку меню
-  menuToggle.forEach(button => {
-    button.addEventListener('click', (event) => {
-      // Отримуємо значення атрибуту data-nav
-      const targetSidebarId = event.target.getAttribute('data-nav');
-
-      // Знаходимо відповідний сайдбар
-      const targetSidebar = document.getElementById(targetSidebarId);
-
-      // Перевіряємо, чи цей сайдбар вже відкритий
-      if (targetSidebar) {
-        // Перемикаємо клас active на конкретному сайдбарі
-        targetSidebar.classList.toggle('active');
-      }
+  hasDropdown.forEach(button => {
+    button.addEventListener('click', () => {
+      items.classList.toggle('active');
     });
   });
+
+  back.addEventListener('click', () => {
+    items.classList.remove('active');
+    items.classList.add('h-animation-right');
+  });
 }
-
-

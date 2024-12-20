@@ -10,32 +10,33 @@ button {
     font-size: 16px;
     line-height: 20px;
   }
-  &--primary {
-    & a {
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      background-color: $accent-color;
-      color: $white;
-      border-radius: 8px;
-      padding: 16px 40px;
-      &:hover {
-        background-color: #3c66b5;
-        transition: $transition;
-      }
+  &--header {
+    padding: 12px 24px !important;
+  }
+  &-primary {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: $accent-color;
+    color: $white;
+    border-radius: 8px;
+    padding: 16px 40px;
+    &:hover {
+      background-color: #3c66b5;
+      transition: $transition;
     }
   }
-  &--secondary {
+  &-secondary {
     display: flex;
     align-items: center;
-    & a {
-      color: $accent-color;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-    }
+    color: $accent-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: inline-block;    
+    align-items: center;      
     & svg {
       margin-left: 4px;
     }
@@ -44,10 +45,8 @@ button {
 
 @media screen and (max-width: 425px) {
   .btn {
-
     & a {
       font-size: 14px;
-
     }
   }
 }

@@ -10,32 +10,39 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 12px;
-    & svg {
-        position: absolute;
-        z-index: 1;
-    }
+
 
     &-item {
-    position: relative;
-      border-radius: 12px;
+      position: relative;
+      border-radius: 12px; 
       background-color: $gray-light;
       min-height: 285px;
       height: 100%;
-      padding: 12px;
-      &::before  {
+      &-img {
+        width: 84px;
+        height: 84px;
+        border-bottom-right-radius:  12px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & svg {
+          position: absolute;
+          z-index: 1;
+        }
+      }
+
+      &::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: 84px;
-        height: 84px;
-        background-color: $white;
         clip-path: circle(100% at 100% 100);
-        border-radius: -12px;
       }
 
       & h3 {
         line-height: 38px;
+        margin-bottom: 12px;
       }
       & p {
         color: $text-color;
@@ -45,7 +52,7 @@
       }
 
       &-1 {
-        grid-column: 1; 
+        grid-column: 1;
         grid-row: span 2;
       }
     }
@@ -54,40 +61,38 @@
     }
     &-text {
       width: 100%;
-      padding-top: 113px;
+      padding-top: 36px;
+      margin-left: 30px;
     }
     &-btn {
       position: relative;
-      top: 180px;    margin: 30px 0px;
-
+      top: 180px;
+      margin: 30px 0px;
+      margin-left: 32px;
     }
   }
+}
+.solutions__grid-item-1 {
+  height: 582px !important;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
   .solutions__grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
-  .solutions__grid {    
+  .solutions__grid {
     &-btn {
       position: relative;
       top: 180px;
       right: 0;
     }
   }
-}
-@media (max-width: 730px) {
+
   .solutions__grid {
-    grid-template-columns: repeat(1, 1fr); 
-    &-1 {
-      grid-column: span 1; /* Make it span 1 column */
-      grid-row: span 1; /* Make it span 1 row */
-    }
-    // &-item h3  {
-    //   font-size: 30px;
-    // }
+    grid-template-columns: repeat(1, 1fr);
     &-btn {
       position: relative;
       top: 0px;
@@ -96,17 +101,9 @@
   }
 }
 @media (max-width: 620px) {
-  // .solutions__grid-item h3  {
-  //   font-size: 28px;
-  // }
   .solutions__grid-btn {
     position: relative;
     top: 0px;
     right: 0px;
-  }
-}
-@media (max-width: 425px) {
-  .solutions__grid-btn {
-
   }
 }
