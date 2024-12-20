@@ -26,6 +26,10 @@
       height: 531px;
       position: relative;
       padding: 0px 12px;
+      &:nth-child(even) {
+        border-left: red 1px solid !important;
+        border-right: red 1px solid !important;
+      }
     }
   }
 
@@ -73,11 +77,11 @@
     }
   }
 }
-    
-.news__slider-item:nth-child(even) {
-  border-left: red 1px solid !important;
-  border-right: red 1px solid !important;
-}
+
+// .news__slider-item:nth-child(even) {
+//   border-left: red 1px solid !important;
+//   border-right: red 1px solid !important;
+// }
 
 @media screen and (max-width: 425px) {
   .news__item-content {

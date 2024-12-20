@@ -58,14 +58,20 @@ export default function sidebarLogic() {
     }
   }
 
-  hasDropdown.forEach(button => {
-    button.addEventListener('click', () => {
-      items.classList.toggle('active');
-    });
-  });
+  
 
-  back.addEventListener('click', () => {
-    items.classList.remove('active');
-    items.classList.add('h-animation-right');
-  });
+
+
+  // hasDropdown.forEach(button => {
+  //   button.addEventListener('click', () => {
+  //     items.classList.toggle('active');
+  //   });
+  // });
+
+
+  // back.addEventListener('click', () => {
+  //   items.classList.remove('active');
+  //   items.classList.add('h-animation-right');
+  // });
+
 }
