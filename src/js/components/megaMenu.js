@@ -6,6 +6,6 @@ export default function megaMenu() {
 
     if (megaMenuDropdown.length) {
       megaMenuDropdown.toggleClass('show');
-    }
+    } 
   });
 }
