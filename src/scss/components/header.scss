@@ -19,6 +19,7 @@
     border-radius: 8px;
     z-index: 100;
     box-shadow: 0px 0px 9px 0px rgba(45, 86, 163, 0.1);
+    // overflow: hidden;
 
     &-wrapper {
       padding: 20px 12px;
@@ -112,8 +113,7 @@
       position: relative;
       &:hover svg {
         transition: $transition;
-        // transform: rotate(180deg);  
-      } 
+      }
     }
     li:first-child:hover .header__mega-menu {
       opacity: 1;
@@ -128,7 +128,6 @@
         color: $accent-color;
         transition: $transition;
       }
-      
     }
     svg {
       margin-left: 8px;
@@ -140,6 +139,30 @@
   &__menu {
     display: none;
   }
+}
+
+.mega__menu-dropdown {
+  width: 100%;
+  transform: translate(0, 0px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  overflow: visible;
+  visibility: 1;
+}
+.mega__menu-dropdown.show {
+  width: 90%;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 99;
+  background: $white;
+  transform: translate(0px, 0px);
+  transition: transform 1s;
+}
+.mega__menu-dropdown.show .mega__menu-item {
+  /* Переміщаємо елементи на 100% вліво, коли .show активний */
+  transform: translateX(-100%);
 }
 
 @media (max-width: 1024px) {
