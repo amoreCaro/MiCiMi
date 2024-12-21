@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
   }
-  
+
   &__content {
     margin-left: 93px;
     width: 60%;
@@ -44,15 +44,14 @@
 
 @media (max-width: 768px) {
   .cta__text {
-   & h1 {
+    & h1 {
       font-size: 30px;
       line-height: 36px;
-   }
+    }
   }
 }
 
 @media (max-width: 720px) {
-
   .cta__content {
     margin-left: 0px;
   }
@@ -69,7 +68,7 @@
   .cta__image {
     display: flex;
     justify-content: center;
-    
+
     & img {
       height: auto;
       width: 80%;
@@ -82,13 +81,21 @@
   }
 }
 
+@media (max-width: 425px) {
+  .cta__text {
+    margin: 50px 0px;
+
+    & h1 {
+      font-size: 26px;
+    }
+  }
+}
 @media (max-width: 320px) {
   .cta__text {
-        margin-bottom: -20px;
+    margin-bottom: -20px;
 
-   & h1 {
+    & h1 {
       font-size: 26px;
-   }
+    }
   }
-
 }

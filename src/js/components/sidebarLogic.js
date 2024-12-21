@@ -15,15 +15,18 @@ export default function sidebarLogic() {
 
   openModal.on('click', function () {
     const sidebarId = $(this).data('sidebarTarget');
+    const overlayId = '.overlay'; 
 
     if (sidebarId) {
       $(sidebarId).addClass('active');
+      $(overlayId).addClass('active');
     }
   });
 
   closeModal.on('click', function () {
-    console.log("click");
+    const overlayId = '.overlay'; 
     sidebar.removeClass('active');
+    $(overlayId).removeClass('active');
   });
 
   hasChildren.on('click', function () {
