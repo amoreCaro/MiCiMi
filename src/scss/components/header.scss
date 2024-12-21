@@ -34,7 +34,7 @@
       }
       ul {
         display: block;
-        margin: 24px 0px;
+        margin: 16px 0px;
         // position: relative;
 
         &:not(:first-of-type)::before {
@@ -151,11 +151,13 @@
 .mega__menu-dropdown.show {
   width: 100%;
   overflow-y: auto;
-  height: 580px;
+  height: 100vh;
   z-index: 99;
   background: $white;
   transform: translate(0px, 0px);
   transition: transform 1s;
+  position: absolute;
+  top: -100px;
 }
 .mega__menu-dropdown.show .mega__menu-item {
   transform: translateX(100%);
