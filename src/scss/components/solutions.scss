@@ -11,17 +11,16 @@
     grid-template-rows: repeat(2, auto);
     gap: 12px;
 
-
     &-item {
       position: relative;
-      border-radius: 12px; 
+      border-radius: 12px;
       background-color: $gray-light;
       min-height: 285px;
       height: 100%;
       &-img {
         width: 84px;
         height: 84px;
-        border-bottom-right-radius:  12px;
+        border-bottom-right-radius: 12px;
         background-color: $white;
         display: flex;
         justify-content: center;
@@ -72,19 +71,15 @@
     }
     &-content {
       padding-left: 40px;
-      
     }
     &-text {
       width: 100%;
-      padding-top: 36px;
-      margin-left: 30px;
-
+      padding: 36px 30px 0px 30px;
     }
     &-btn {
-      position: relative;
-      top: 180px;
-      margin: 30px 0px;
-      margin-left: 32px;
+      position: absolute;
+      bottom: 60px;
+      margin: 0 32px;
     }
   }
 }
@@ -97,29 +92,16 @@
   .solutions__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-@media (max-width: 900px) {
-  .solutions__grid {
-    // &-btn {
-    //   position: absolute;
-    //   left: 30px;
-    //   bottom: 40px;
-    // }
-  }
 
   .solutions__grid {
     grid-template-columns: repeat(1, 1fr);
-    &-btn {
-      position: relative;
-      top: 0px;
-      right: 135px;
-    }
   }
 }
-@media (max-width: 620px) {
+
+@media (max-width: 375px) {
   .solutions__grid-btn {
-    position: relative;
-    top: 0px;
-    right: 0px;
+    position: absolute;
+    bottom: 40px;
+    margin: 0 32px;
   }
 }

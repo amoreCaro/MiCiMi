@@ -37,6 +37,16 @@
     display: flex;
     gap: 24px;
     margin-top: 8px;
+    & a:hover svg {
+      background: $accent-color;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    & a:hover path {
+      fill: $white;
+      transition: all ease-in-out 0.3s;
+      background: $accent-color;
+    }
     & li {
       list-style: none;
       max-width: 24px;
@@ -53,9 +63,19 @@
       color: $text-color;
     }
   }
-  &__links a {
-    color: $accent-color;
-    margin-right: 24px;
+  &__links {
+    display: flex;
+    & ul {
+      list-style: none;
+    }
+    & a {
+      color: $accent-color;
+      margin-right: 24px;
+      margin-bottom: 8px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 .footer__bottom::before {
@@ -94,5 +114,8 @@
     justify-content: center;
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
+  }
+  .footer__links {
+    display: block;
   }
 }

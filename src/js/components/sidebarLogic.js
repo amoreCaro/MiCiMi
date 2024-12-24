@@ -15,7 +15,7 @@ export default function sidebarLogic() {
 
   openModal.on('click', function () {
     const sidebarId = $(this).data('sidebarTarget');
-    const overlayId = '.overlay'; 
+    const overlayId = '.overlay';
 
     if (sidebarId) {
       $(sidebarId).addClass('active');
@@ -24,7 +24,7 @@ export default function sidebarLogic() {
   });
 
   closeModal.on('click', function () {
-    const overlayId = '.overlay'; 
+    const overlayId = '.overlay';
     sidebar.removeClass('active');
     $(overlayId).removeClass('active');
   });
