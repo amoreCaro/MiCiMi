@@ -1,9 +1,58 @@
+
 .btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    & a {
-        text-decoration: none; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  & p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &--header {
+    padding: 12px 24px !important;
+  }
+  &-primary {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #2d56a3;
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px 40px;
+    box-shadow: 0px 0px 0px 1px #214a93;
+    display: inline-block;
+    &:hover {
+      background-color: #3c66b5;
+      transition: $transition;
     }
+  }
+  &-secondary {
+    display: flex;
+    align-items: center;
+    color: $accent-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: inline-block;
+    align-items: center;
+    &:hover {
+      color: #3c66b5;
+      transition: $transition;
+    }
+    & svg {
+      margin-left: 4px;
+      &:hover {
+        color: red;
+        transition: $transition;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .btn {
+    font-size: 14px;
+  }
 }

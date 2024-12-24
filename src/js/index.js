@@ -1,10 +1,9 @@
-import hero from './components/hero';
-import setupMegaMenu from "./components/setupMegaMenu";
-import toggleMenuVisibility from "./components/toggleMenuVisibility";
+import news from './components/news';
+import sidebarLogic from './components/sidebarLogic';
+import megaMenu from './components/megaMenu';
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    hero();
-    setupMegaMenu();
-    toggleMenuVisibility();
+$( document ).ready(function() {
+    news();
+    sidebarLogic();
+    megaMenu();
 });

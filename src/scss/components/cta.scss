@@ -1,40 +1,105 @@
 .cta {
-    &__container {
-        background-image: url(../../img/cta/cta-decor.svg);
-        background-size: cover; // Забезпечує покриття всього блоку
-        background-repeat: no-repeat; // Запобігає повторенню зображення
-        background-position: center; // Вирівнює зображення по центру
-        width: 100%; 
-        background-color: $gray-light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-    }
-      &__text {
-      max-width: 541px;
+  &__container {
+    background-image: url(../img/cta__decor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 36%;
+    width: 100%;
+    min-height: 811px;
+    position: relative;
+    width: 100%;
+    background-color: $gray-light;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__content {
+    margin-left: 93px;
+    width: 60%;
+  }
+  &__text {
+    & h1 {
       width: 100%;
-      margin-bottom: 24px;
-        & h1 {
-          margin-bottom: 40px;
-          font-weight: 400;
-          font-size: 48px;
-          line-height: 52px;
-        }
-      }
-       
-    &__btn {
-      display: flex;
-      justify-content: left;
-      & a {
-        background-color: $accent-color;
-        color: $white;
-        border-radius: 8px;
-        padding: 16px 40px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-      }
+      position: relative;
+      margin-bottom: 40px;
+      font-weight: 400;
     }
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    justify-content: left;
+  }
+  &__image {
+    & img {
+      object-fit: cover;
+      top: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
-  
+
+@media (max-width: 768px) {
+  .cta__text {
+    & h1 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .cta__content {
+    margin-left: 0px;
+  }
+  .cta__container {
+    min-height: 420px;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: left;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta__image {
+    display: flex;
+    justify-content: center;
+
+    & img {
+      height: auto;
+      width: 80%;
+      object-fit: contain;
+      left: 20%;
+    }
+  }
+  .cta__text {
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .cta__container {
+    padding-bottom: 24px;
+  }
+  .cta__text {
+    margin: 50px 0px;
+
+    & h1 {
+      font-size: 26px;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .cta__text {
+    margin-bottom: -20px;
+
+    & h1 {
+      font-size: 26px;
+    }
+  }
+}
