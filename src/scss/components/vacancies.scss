@@ -1,0 +1,85 @@
+
+.vacancies {
+    &__container {
+      background-color: $gray-light;
+      border-radius: 12px;
+      padding: 60px 30px;
+    }
+    &-titles {
+      & h2 {
+        margin-bottom: 16px;
+      }
+      & h3 {
+        color: $text-color;
+        margin-bottom: 60px;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  .vacancy {
+    &-item {
+      background: $white;
+      border-radius: 8px;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+  
+      & p {
+        color: $text-color;
+        max-width: 628px;
+        width: 100%;
+      }
+      &--contact {
+        background: $white;
+        padding: 32px;
+        border-radius: 8px;
+        & p {
+          color: $accent-color;
+          font-size: 24px;
+          line-height: 38px;
+          & a {
+            text-decoration: none;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+          }
+        }
+      }
+    }
+  
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      & h3 {
+        max-width: 938px;
+        width: 100%;
+      }
+      & span {
+        text-decoration: none;
+        color: $accent-color;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      & p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &-btn {
+        position: relative;
+        right: 0;
+        margin-top: auto;
+      }
+    }
+  }
+  
