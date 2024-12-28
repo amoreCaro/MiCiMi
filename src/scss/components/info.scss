@@ -20,9 +20,6 @@
       color: $text-color;
     }
   }
-
-  &__btn {
-  }
   &__content {
     max-width: 461px;
     width: 100%;
@@ -33,6 +30,11 @@
       width: 100%;
 
     }
+  }
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
