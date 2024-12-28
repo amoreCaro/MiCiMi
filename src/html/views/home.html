@@ -1,0 +1,39 @@
+<% var data = { title: "Home" }; %>
+<!-- <%=_.template(require('./../includes/header.html').default)(data) %> -->
+
+ <main class="page__main">
+  <!-- <%= _.template(require('./../includes/hero.html').default)({
+    title: "At Moneyline Sports, we believe in Math, not Intuition.",
+    text: "Moneyline Sports develops predictive sports analytics and data products for US sports, including NFL, NBA, MLB, and NCAA.",
+    partners: true,
+  }) %> -->
+
+  <%=_.template(require('./../includes/hero.html').default)(data) %>
+  <%=_.template(require('./../includes/quote.html').default)(data) %>
+  <%=_.template(require('./../includes/solutions.html').default)(data) %>
+  <%=_.template(require('./../includes/info.html').default)(data) %>
+  <%=_.template(require('./../includes/partners.html').default)(data) %>
+  <%=_.template(require('./../includes/news.html').default)(data) %>
+  <%=_.template(require('./../includes/cta.html').default)(data) %>
+</main> 
+
+<!-- <%= _.template(require('./../includes/footer.html').default)(data) %> -->
+
+
+<!-- <% var data = { title: "Home" }; %>
+
+ <%=_.template(require('./../includes/header.html').default)(data) %>
+
+ <main>
+     <%=_.template(require('./../includes/vacancies.html').default)(data) %> 
+    <%=_.template(require('./../includes/hero.html').default)(data) %>
+    <%=_.template(require('./../includes/quote.html').default)(data) %>
+    <%=_.template(require('./../includes/solutions.html').default)(data) %>
+    <%=_.template(require('./../includes/info.html').default)(data) %>
+    <%=_.template(require('./../includes/partners.html').default)(data) %>
+    <%=_.template(require('./../includes/news.html').default)(data) %>
+    <%=_.template(require('./../includes/cta.html').default)(data) %>
+</main>
+
+<%=_.template(require('./../includes/footer.html').default)(data) %> 
+<%=_.template(require('./../includes/sidebar.html').default)(data) %>   -->

@@ -1,85 +1,163 @@
-
 .vacancies {
-    &__container {
-      background-color: $gray-light;
-      border-radius: 12px;
-      padding: 60px 30px;
+  &__container {
+    background-color: $gray-light;
+    border-radius: 12px;
+    padding: 60px 30px;
+  }
+  &-titles {
+    margin-bottom: 60px;
+    & h2 {
+      margin-bottom: 16px;
     }
-    &-titles {
-      & h2 {
-        margin-bottom: 16px;
-      }
-      & h3 {
-        color: $text-color;
-        margin-bottom: 60px;
-      }
-    }
-    &__list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    & h3 {
+      color: $text-color;
     }
   }
-  .vacancy {
-    &-item {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.vacancy {
+  &-item {
+    background: $white;
+    border-radius: 8px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+
+    & p {
+      color: $text-color;
+      max-width: 628px;
+      width: 100%;
+    }
+    &--contact {
       background: $white;
+      padding: 32px;
       border-radius: 8px;
-      padding: 60px;
-      display: flex;
-      flex-direction: column;
-  
       & p {
-        color: $text-color;
-        max-width: 628px;
-        width: 100%;
-      }
-      &--contact {
-        background: $white;
-        padding: 32px;
-        border-radius: 8px;
-        & p {
-          color: $accent-color;
-          font-size: 24px;
-          line-height: 38px;
-          & a {
-            text-decoration: none;
-            color: inherit;
-            font-size: inherit;
-            line-height: inherit;
-          }
+        color: $accent-color;
+        font-size: 24px;
+        line-height: 38px;
+        & a {
+          text-decoration: none;
+          color: inherit;
+          font-size: inherit;
+          line-height: inherit;
         }
       }
     }
-  
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 32px;
-      & h3 {
-        max-width: 938px;
-        width: 100%;
-      }
-      & span {
-        text-decoration: none;
-        color: $accent-color;
-        font-size: 16px;
-        line-height: 24px;
-      }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    margin-bottom: 32px;
+    & h3 {
+      max-width: 938px;
+      width: 100%;
     }
-    &__bottom {
-      display: flex;
-      justify-content: space-between;
-      & p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-      }
-      &-btn {
-        position: relative;
-        right: 0;
-        margin-top: auto;
+    & span {
+      text-decoration: none;
+      color: $accent-color;
+      font-size: 16px;
+      line-height: 24px;
+      &:hover {
+        color: #3c66b5;
+        transition: $transition;
       }
     }
   }
-  
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    & p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &-btn {
+      position: relative;
+      right: 0;
+      margin-top: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vacancies-titles {
+    margin-bottom: 48px;
+    & h2 {
+      margin-bottom: 12px;
+    }
+  }
+  .vacancy-item {
+    & h3 {
+      font-size: 26px;
+    }
+    & p {
+      max-width: 550px;
+    }
+  }
+  .vacancy-item--contact p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vacancies-titles {
+    margin-bottom: 36px;
+    line-height: 30px;
+    & h2 {
+      margin-bottom: 8px;
+    }
+  }
+  .vacancies__container {
+    padding: 44px 20px;
+  }
+  .vacancy-item {
+    padding: 30px;
+    & h3 {
+      font-size: 24px;
+    }
+    & p {
+      max-width: 320px;
+    }
+  }
+  .vacancy-item--contact {
+    padding: 24px;
+    & p {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .vacancies-titles {
+    margin-bottom: 32px;
+  }
+  .vacancy-item {
+    padding: 24px;
+    & h3 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    & p {
+      max-width: 320px;
+      margin-bottom: 16px;
+    }
+  }
+  .vacancy__top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  .vacancy__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vacancy-item--contact p {
+    font-size: 16px;
+  }
+}
