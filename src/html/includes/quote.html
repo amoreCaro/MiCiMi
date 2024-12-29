@@ -2,22 +2,17 @@
   <div class="quote__container container">
     <div class="quote__content">
       <div class="quote__text h-content">
-        <p>
-          Our focus on collaboration, transparency, and excellence has been the
-          cornerstone of our approach, leading to the development of
-          best-in-class Mission Critical facilities. With a collective
-          experience of over 500 years in Data Centres, our team is uniquely
-          positioned to ensure certainty of delivery and the delivery of
-          high-quality finished products.
-        </p> 
+        <%if (typeof text !== 'undefined') {%>
+          <p><%=text%></p>
+        <%}%>
       </div>
       <div class="quote__btn">
-        <a class="btn btn-primary"href="#">Learn More</a>
+        <a class="btn btn-primary" href="#">Learn More</a>
       </div>
     </div>
   </div>
 </section>
-<section class="quote section" data-aos="fade-up" data-aos-duration="2000">
+<!-- <section class="quote section" data-aos="fade-up" data-aos-duration="2000">
   <div class="quote__container container">
     <div class="quote__content">
       <div class="quote__text h-content">
@@ -30,4 +25,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->

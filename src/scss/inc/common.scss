@@ -15,6 +15,20 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 100vh;
+
+  &__main {
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
 .l-wrapper {
   display: flex;
   flex-direction: column;
