@@ -1,0 +1,47 @@
+.advantages {
+  &__container {
+    background-color: $gray-light;
+    padding: 30px;
+    border-radius: 12px;
+  }
+  &__content h2 {
+    text-align: center;
+  }
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(4, auto);
+    gap: 12px;
+    &-item {
+      background-color: $white;
+      padding: 32px;
+      border-radius: 8px;
+      min-height: 216px;
+      height: 100%;
+    }
+  }
+}
+.advatages__grid-item-1 {
+  grid-row: span 2;
+  & h3 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 102px;
+  }
+  & p {
+    color: $text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advatages__grid-item-2 {
+  // grid-column: span 1; /* Займає 1 колонку */
+  // grid-row: 1; /* Займає 1 рядок */
+  margin-bottom: 0;
+
+  /* За допомогою відступу або прозорості забезпечуємо місце під елементом */
+  padding-bottom: 100px;
+}
