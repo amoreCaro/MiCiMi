@@ -41,13 +41,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+
     & span {
       text-decoration: none;
       color: $accent-color;
       font-size: 16px;
       line-height: 24px;
-      
+
       &:hover {
         color: #3c66b5;
         transition: $transition;
@@ -58,42 +58,40 @@
       margin-top: auto;
     }
   }
-  
 
-&-item {
-  background: $white;
-  border-radius: 8px;
-  padding: 60px;
-  display: flex;
-  flex-direction: row;
-
-  & p {
-    color: $text-color;
-    max-width: 628px; 
-    width: 100%;
-  }
-
-  &--contact {
+  &-item {
     background: $white;
-    padding: 32px;
     border-radius: 8px;
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
 
     & p {
-      color: $accent-color;
-      font-size: 24px;
-      line-height: 38px;
-      max-width: none;
+      color: $text-color;
+      max-width: 628px;
+      width: 100%;
+    }
 
-      & a {
-        text-decoration: none;
-        color: inherit;
-        font-size: inherit;
-        line-height: inherit;
+    &--contact {
+      background: $white;
+      padding: 32px;
+      border-radius: 8px;
+
+      & p {
+        color: $accent-color;
+        font-size: 24px;
+        line-height: 38px;
+        max-width: none;
+
+        & a {
+          text-decoration: none;
+          color: inherit;
+          font-size: inherit;
+          line-height: inherit;
+        }
       }
     }
   }
-}
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -111,6 +109,10 @@
       max-width: 550px;
     }
   }
+  .vacancy__left {
+    max-width: 600px;
+    margin-right: 32px;
+  }
   .vacancy-item--contact p {
     font-size: 20px;
   }
@@ -127,12 +129,19 @@
     padding: 44px 20px;
   }
   .vacancy-item {
+    display: flex;
+    flex-direction: column;
     padding: 30px;
     & h3 {
       font-size: 24px;
+      margin-bottom: 20px;
     }
     & p {
-      max-width: 320px;
+      max-width: none;
+      margin-bottom: 20px;
+    }
+    & span {
+      margin-bottom: 20px;
     }
   }
   .vacancy-item--contact {
