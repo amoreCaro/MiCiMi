@@ -4,7 +4,7 @@
     border-radius: 12px;
     padding: 60px 30px;
   }
-  &-titles {
+  &__titles {
     margin-bottom: 60px;
     & h2 {
       margin-bottom: 16px;
@@ -20,74 +20,84 @@
   }
 }
 .vacancy {
-  &-item {
-    background: $white;
-    border-radius: 8px;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-
-    & p {
-      color: $text-color;
-      max-width: 628px;
-      width: 100%;
-    }
-    &--contact {
-      background: $white;
-      padding: 32px;
-      border-radius: 8px;
-      & p {
-        color: $accent-color;
-        font-size: 24px;
-        line-height: 38px;
-        & a {
-          text-decoration: none;
-          color: inherit;
-          font-size: inherit;
-          line-height: inherit;
-        }
-      }
-    }
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
-    margin-bottom: 32px;
+  &__left {
+    max-width: 938px;
+    width: 100%;
+    margin-right: 82px;
     & h3 {
-      max-width: 938px;
-      width: 100%;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 32px;
     }
-    & span {
-      text-decoration: none;
-      color: $accent-color;
-      font-size: 16px;
-      line-height: 24px;
-      &:hover {
-        color: #3c66b5;
-        transition: $transition;
-      }
-    }
-  }
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
     & p {
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
     }
-    &-btn {
-      position: relative;
-      right: 0;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    & span {
+      text-decoration: none;
+      color: $accent-color;
+      font-size: 16px;
+      line-height: 24px;
+      
+      &:hover {
+        color: #3c66b5;
+        transition: $transition;
+      }
+    }
+
+    .button {
       margin-top: auto;
+    }
+  }
+  
+
+&-item {
+  background: $white;
+  border-radius: 8px;
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+
+  & p {
+    color: $text-color;
+    max-width: 628px; 
+    width: 100%;
+  }
+
+  &--contact {
+    background: $white;
+    padding: 32px;
+    border-radius: 8px;
+
+    & p {
+      color: $accent-color;
+      font-size: 24px;
+      line-height: 38px;
+      max-width: none;
+
+      & a {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
     }
   }
 }
 
+}
+
 @media screen and (max-width: 1024px) {
-  .vacancies-titles {
+  .vacancies__titles {
     margin-bottom: 48px;
     & h2 {
       margin-bottom: 12px;
@@ -106,7 +116,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .vacancies-titles {
+  .vacancies__titles {
     margin-bottom: 36px;
     line-height: 30px;
     & h2 {
@@ -133,7 +143,7 @@
   }
 }
 @media screen and (max-width: 425px) {
-  .vacancies-titles {
+  .vacancies__titles {
     margin-bottom: 32px;
   }
   .vacancy-item {

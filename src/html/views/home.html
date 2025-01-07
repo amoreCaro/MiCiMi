@@ -1,15 +1,33 @@
-<!-- <% var data = { title: "Home" }; %>
+<% var data = { title: "Home" }; %>
 <%=_.template(require('./../includes/header.html').default)(data) %>
-
- <main class="page__main">
-  <%=_.template(require('./../includes/banner.html').default)(data) %>
-  <%=_.template(require('./../includes/quote.html').default)(data) %>
-  <%=_.template(require('./../includes/solutions.html').default)(data) %>
-  <%=_.template(require('./../includes/info.html').default)(data) %>
-  <%=_.template(require('./../includes/partners.html').default)(data) %>
-  <%=_.template(require('./../includes/news.html').default)(data) %>
-  <%=_.template(require('./../includes/cta.html').default)(data) %>
-</main> 
-
- <%= _.template(require('./../includes/footer.html').default)(data) %>
- <%=_.template(require('./../includes/sidebar.html').default)(data) %>  -->
+<main class="page__main">
+    <%= _.template(require('./../includes/banner.html').default)({
+      title: "We Drive Change",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco laboris.",
+      image: "img/banner__image.png",
+    }) %>
+    <%= _.template(require('./../includes/quote.html').default)({
+        text: "Our focus on collaboration, transparency, and excellence has been the cornerstone of our approach, leading to the development of best-in-class Mission Critical facilities. With a collective experience of over 500 years in Data Centres, our team is uniquely positioned to ensure certainty of delivery and the delivery of high-quality finished products.",
+      }) %>
+      <%= _.template(require('./../includes/info.html').default)({
+        title: "It’s our people and expertise that make a difference",
+        text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
+        image: "img/info__image.png",
+      }) %>
+      <%= _.template(require('./../includes/partners.html').default)({
+        title: "In Good Company",
+        text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
+        image: "img/info__image.png",
+      }) %>
+      <%= _.template(require('./../includes/news.html').default)({
+        title: "News & <span>Insights</span>",
+        text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
+        image: "img/info__image.png",
+      }) %>
+      <%= _.template(require('./../includes/cta.html').default)({
+        title: "Talk to us about <br> your project",
+        image: "img/cta__image.png",
+      }) %>
+</main>
+<%= _.template(require('./../includes/footer.html').default)(data) %>
+<%=_.template(require('./../includes/sidebar.html').default)(data) %>   

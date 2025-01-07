@@ -6,7 +6,7 @@
 "img/partner-5.png",
 "img/partner-6.png",
 "img/partner-7.png",
-<!-- "img/partner-8.png" -->
+"img/partner-8.png"
 ]%>
 
 <section class="partners section" data-aos="fade-up"  data-aos-duration="2000">
@@ -14,10 +14,12 @@
     <div class="partners__content">
       <h2><%=title%></h2>
       <div class="partners__grid">
-        
         <%partrersImages.forEach((image) => {%>
-          <img src="<%=image%>" alt="">
-        <%})%>
+        <div class="partners__grid-item">
+            <img src="<%=image%>" alt="">
+          </div>
+          <%})%>
+       
 
       </div>
     </div>
