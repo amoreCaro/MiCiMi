@@ -1,0 +1,23 @@
+<section
+  class="cover section h-last-section"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+>
+  <div class="cover__container container">
+    <div class="cover__text">
+      <h2><%=title%></h2>
+      <p><%=text%></p>
+    </div>
+
+    <%if (typeof image !== 'undefined') {%>
+    <div class="cover__image">
+      <img src="<%=image%>" alt="" />
+    </div>
+    <%}%> 
+    <%if (typeof image !== 'undefined') {%>
+    <div class="cover__decor">
+      <img src="<%=decor%>" alt="" />
+    </div>
+    <%}%>
+  </div>
+</section>

@@ -16,7 +16,11 @@
                 <img src="<%= image %>" alt="" />
               </div>
             <% } %>
-            
+            <% if (typeof decor !== 'undefined') { %>
+              <div class="info__decor">
+                <img src="<%= decor %>" alt="" />
+              </div>
+            <% } %>
         </div>
     </div>
 </section>

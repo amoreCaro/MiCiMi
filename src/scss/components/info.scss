@@ -45,8 +45,10 @@
     align-items: center;
     justify-content: center;
   }
+  .info__decor {
+    display: none;
+  }
   .info__image {
-
     width: 50%;
   }
 }

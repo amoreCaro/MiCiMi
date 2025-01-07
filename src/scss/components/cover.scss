@@ -1,0 +1,69 @@
+.cover {
+    &__container {
+      position: relative;
+      overflow: auto;
+    }
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      & h2 {
+        color: $black;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 43px;
+      }
+      & p {
+        max-width: 595px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-color;
+      }
+    }
+    &__image img {
+      width: 100%;          
+      height: auto;         
+      object-fit: cover; 
+    }
+    &__decor {
+      position: absolute;
+      right: -165px;
+      bottom: 0;
+      overflow: hidden;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .cover__text p {
+      max-width: 425px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cover__text {
+      & h2 {
+        font-size: 32px;
+      }
+      & p {
+        max-width: 325px;
+      }
+    }
+    .cover__decor {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 425px) {
+    .cover__text {
+      display: block;
+      & h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+      & p {
+        max-width: 325px;
+      }
+    }
+  }
