@@ -3,7 +3,6 @@ export default function megaMenu() {
   const back = $('.submenu__item-back');
   const items = $('.submenu__item');
 
-
   hasChildren.on('click', function () {
     const megaMenuDropdown = $(this).find('.mega__menu-dropdown');
 
