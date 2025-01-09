@@ -39,7 +39,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .programs__content h2 {
     margin-bottom: 50px;
   }
@@ -47,7 +47,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .programs__content h2 {
     margin-bottom: 40px;
   }
@@ -55,7 +55,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .programs__content h2 {
     margin-bottom: 30px;
   }

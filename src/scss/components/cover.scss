@@ -35,13 +35,13 @@
     }
   }
   
-  @media screen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     .cover__text p {
       max-width: 425px;
     }
   }
   
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .cover__text {
       & h2 {
         font-size: 32px;
@@ -55,7 +55,7 @@
     }
   }
   
-  @media screen and (max-width: 425px) {
+  @media (max-width: 425px) {
     .cover__text {
       display: block;
       & h2 {

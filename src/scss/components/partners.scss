@@ -17,7 +17,6 @@
     gap: 12px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    // margin-top: 60px;
     &-item {
       padding: 32px;
       position: relative;
@@ -47,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .partners__conteiner {
     padding: 45px 0px;
   }
@@ -62,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .partners__container {
     padding: 30px 0px;
   }
@@ -76,7 +75,7 @@
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .partners__grid {
     gap: 8px;
   }
@@ -85,7 +84,7 @@
   }
 }
 
-@media screen and (max-width: 325px) {
+@media (max-width: 325px) {
   .partners__grid-item {
     padding: 16px !important;
   }

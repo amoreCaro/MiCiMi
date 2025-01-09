@@ -94,7 +94,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .vacancies__titles {
     margin-bottom: 48px;
     & h2 {
@@ -117,7 +117,7 @@
     font-size: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .vacancies__titles {
     margin-bottom: 36px;
     line-height: 30px;
@@ -151,7 +151,7 @@
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .vacancies__titles {
     margin-bottom: 32px;
   }

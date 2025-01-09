@@ -7,7 +7,6 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 100%;
   }
 
   &__content {
@@ -79,13 +78,16 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
+  .banner--large .banner__image {
+    min-height: 355px;
+  }
   .banner--small .banner__image {
     min-height: 350px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media(max-width: 375px) {
   .banner--small .banner__image {
     min-height: 300px;
   }

@@ -37,7 +37,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .info__container {
     display: flex;
     flex-direction: column-reverse;
@@ -52,7 +52,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .info__container {
     display: flex;
     flex-direction: column-reverse;
@@ -62,12 +62,12 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media  (max-width: 375px) {
   .info__text {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
   .info__text {
     margin-bottom: 16px;
   }

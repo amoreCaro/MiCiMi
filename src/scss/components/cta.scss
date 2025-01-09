@@ -1,10 +1,5 @@
 .cta {
   &__container {
-    // background-image: url(../img/cta__decor.png);
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: 36%;
-    // width: 100%;
     min-height: 811px;
     position: relative;
     width: 100%;
@@ -56,6 +51,9 @@
       line-height: 36px;
     }
   }
+  .cta__decor {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -91,6 +89,10 @@
 @media (max-width: 425px) {
   .cta__container {
     padding-bottom: 24px;
+  }
+  .cta__content {
+    max-width: 320px;
+    width: 100%;
   }
   .cta__text {
     margin: 50px 0px;
