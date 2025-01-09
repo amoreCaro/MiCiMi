@@ -1,10 +1,10 @@
 .cta {
   &__container {
-    background-image: url(../img/cta__decor.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 36%;
-    width: 100%;
+    // background-image: url(../img/cta__decor.png);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: 36%;
+    // width: 100%;
     min-height: 811px;
     position: relative;
     width: 100%;
@@ -17,7 +17,7 @@
 
   &__content {
     margin-left: 93px;
-    width: 60%;
+    width: 42%;
   }
   &__text {
     & h1 {
@@ -34,12 +34,18 @@
     justify-content: left;
   }
   &__image {
+    z-index: 1;
     & img {
       object-fit: cover;
       top: 0;
       width: 100%;
       height: auto;
     }
+  }
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 

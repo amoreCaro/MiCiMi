@@ -6,11 +6,19 @@
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco laboris.",
     partners: true,
     image: "img/hero-banner__image.png",
+    btn: {
+      text: "Learn More",
+      class: "btn-primary",
+    },
     additionalClass: "banner--small" 
   }) %>
   
   <%= _.template(require('./../includes/quote.html').default)({
       text: "Whether you're a seasoned professional or just starting your career, we offer a diverse range of opportunities across the mission critical sector. Explore our current openings and discover how you can be a part of an extraordinary team.",
+      btn: {
+        text: "",
+        class: ""
+      },
     }) %>
     <%= _.template(require('./../includes/cover.html').default)({
       title: "Reasons to work with us",
@@ -22,7 +30,10 @@
     <%= _.template(require('./../includes/info.html').default)({
       title: "Our Culture",
       text: "We know that the key to our success lies in our people, and we are always looking for exceptional individuals to join us. We work hard to provide a supportive environment where you will be empowered and encouraged to reach your goals and feel valued for the contribution you are making.",
-      partners: true,
+      btn: {
+        text: "Learn More",
+        class: "btn-primary",
+      },
       image: "img/hero-info__image.png",
       decor: "img/hero-info__decor.png"
     }) %>
