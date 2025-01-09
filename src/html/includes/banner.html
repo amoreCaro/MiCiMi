@@ -1,31 +1,30 @@
-
-
 <section
-  class="section h-first-section banner"
+  class="section banner <%=additionalClass%>"
   data-aos="fade-up"
   data-aos-duration="2000"
 >
-  <div class="banner__container container banner--large">
+  <div class="banner__container container ">
     <div class="banner__content">
       <div class="banner__text">
         <h1><%= title %></h1>
         <% if (typeof text !== 'undefined') { %>
-          <p><%= text %></p>
+        <p><%= text %></p>
         <% } %>
       </div>
+
       <div class="banner__btn">
         <a class="btn btn-primary" href="#">Learn More</a>
       </div>
     </div>
     <% if (typeof image !== 'undefined') { %>
-      <div class="banner__image">
-        <img src="<%= image %>" alt="" />
-      </div>
+    <div class="banner__image">
+      <img src="<%= image %>" alt="" />
+    </div>
     <% } %>
   </div>
 </section>
 
- <!-- <section
+<!-- <section
   class="banner section h-first-section"
   data-aos="fade-up"
   data-aos-duration="2000"
