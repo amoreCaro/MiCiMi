@@ -50,35 +50,6 @@
     }
   }
 }
-
-// @media screen and (max-width: 1390px) {
-//   .banner__image img {
-//     height: 100%;
-//     object-fit: contain;
-//   }
-// }
-
-// @media screen and (max-width: 1130px) {
-//   .banner__text p {
-//     font-size: 18px;
-//   }
-// }
-
-// @media screen and (max-width: 1024px) {
-//   .banner__container {
-//     min-height: 410px;
-//   }
-//   .banner__text p {
-//     font-size: 16px;
-//   }
-// }
-
-// @media screen and (max-width: 870px) {
-//   .banner__text p {
-//     max-width: 400px;
-//   }
-// }
-
 // Mobile
 
 @media (max-width: 768px) {
@@ -96,39 +67,6 @@
   }
 }
 
-// @media screen and (max-width: 500px) {
-//   .banner__image img {
-//     width: 60%;
-//     object-fit: contain;
-//     left: 20%;
-//   }
-
-//   .banner__content {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     margin-top: 250px;
-//   }
-
-//   .banner__text p {
-//     font-size: 16px;
-//   }
-// }
-
-
-
-// @media screen and (max-width: 375px) {
-//   .banner__content {
-//     margin-top: 220px;
-//   }
-// }
-
-// @media screen and (max-width: 325px) {
-//   .banner__content {
-//     margin-top: 175px;
-//   }
-// }
-
 // Modifications
 .banner--large {
   .banner__image {
@@ -145,5 +83,11 @@
 @media screen and (max-width: 425px) {
   .banner--small .banner__image {
     min-height: 350px;
+  }
 }
+
+@media screen and (max-width: 375px) {
+  .banner--small .banner__image {
+    min-height: 300px;
+  }
 }
