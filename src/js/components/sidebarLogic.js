@@ -43,7 +43,7 @@ export default function sidebarLogic() {
 
   $('.has-children').each(function() {
     const svg = $('<img>'); // Створюємо новий елемент img
-    svg.attr('src', '../../img/arrow-right--black.svg'); // Встановлюємо шлях до SVG
+    svg.attr('src', './img/arrow-right--black.svg'); // Встановлюємо шлях до SVG
     svg.attr('alt', 'Arrow Icon'); // Встановлюємо alt текст для доступності
     
     // Додаємо SVG як img до поточного елемента
