@@ -1,5 +1,5 @@
 <section
-  class="cover section h-last-section"
+  class="cover section <%=additionalClass%> "
   data-aos="fade-up"
   data-aos-duration="2000"
 >
@@ -9,12 +9,17 @@
       <p><%=text%></p>
     </div>
 
+    <div class="cover__sectors">
+      <% sectors.forEach(function(sector) { %>
+        <p><%= sector %></p>
+      <% }); %>
+    </div>
+
     <%if (typeof image !== 'undefined') {%>
     <div class="cover__image">
       <img src="<%=image%>" alt="" />
     </div>
-    <%}%> 
-    <%if (typeof image !== 'undefined') {%>
+    <%}%> <%if (typeof image !== 'undefined') {%>
     <div class="cover__decor">
       <img src="<%=decor%>" alt="" />
     </div>

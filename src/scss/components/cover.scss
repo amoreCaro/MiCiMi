@@ -1,69 +1,108 @@
 .cover {
-    &__container {
-      position: relative;
-      overflow: auto;
+
+  &__container {
+    background-color: $gray-light;
+    padding: 60px 30px 30px 30px;
+    position: relative;
+    overflow: auto;
+    border-radius: 12px;
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    & h2 {
+      color: $black;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 43px;
     }
-    &__text {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 60px;
-      & h2 {
-        color: $black;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 43px;
-      }
-      & p {
-        max-width: 595px;
-        width: 100%;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: $text-color;
-      }
-    }
-    &__image img {
-      width: 100%;          
-      height: auto;         
-      object-fit: cover; 
-    }
-    &__decor {
-      position: absolute;
-      right: -165px;
-      bottom: 0;
-      overflow: hidden;
+    & p {
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $text-color;
     }
   }
-  
-  @media (max-width: 1024px) {
-    .cover__text p {
-      max-width: 425px;
+  &__image {
+    & img {
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
   }
-  
-  @media (max-width: 768px) {
-    .cover__text {
-      & h2 {
-        font-size: 32px;
-      }
-      & p {
-        max-width: 325px;
-      }
-    }
-    .cover__decor {
-      display: none;
-    }
+
+  &__decor {
+    position: absolute;
+    right: -165px;
+    bottom: 0;
+    overflow: hidden;
   }
-  
-  @media (max-width: 425px) {
-    .cover__text {
-      display: block;
-      & h2 {
-        font-size: 32px;
-        margin-bottom: 12px;
-      }
-      & p {
-        max-width: 325px;
+  &__sectors {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 60px;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(24px);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 12px;
+    & p {
+      color: $white;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
       }
     }
   }
+}
+
+@media (max-width: 1024px) {
+  .cover__text p {
+    max-width: 425px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover__text {
+    & h2 {
+      font-size: 32px;
+    }
+    & p {
+      max-width: 325px;
+    }
+  }
+  .cover__decor {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .cover__text {
+    display: block;
+    & h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    & p {
+      max-width: 325px;
+    }
+  }
+}
+
+.cover--career {
+  .cover__text p {
+    max-width: 595px;
+  }
+}
+
+.cover--services {
+  .cover__text p {
+    max-width: 478px;
+  }
+}
