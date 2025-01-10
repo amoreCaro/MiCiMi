@@ -1,11 +1,15 @@
+<%var news = [
+  {
+    title: "Post-Election Intel Series: Portugal",
+    time: "19.03.2024",
+  },
+]%>
 
-<section class="news section" data-aos="fade-up"  data-aos-duration="2000">
+<section class="news section" data-aos="fade-up" data-aos-duration="2000">
   <div class="news__container container">
     <div class="news__header">
       <div class="news__header-container container">
-        <h2>
-          <%=title%>
-        </h2>
+        <h2><%=title%></h2>
         <div class="news-button-group">
           <button class="btn news-button-group__button swiper-button-prev">
             <svg
@@ -52,10 +56,11 @@
               <img src="./img/news.png" alt="" />
             </div>
             <div class="news__item-content">
-              <time>19.03.2024</time>
-              <h3>Post-Election Intel Series: Portugal</h3>
+              <%news.forEach((news) => {%>
+              <time><%=news.time%></time>
+              <h3><%=news.title%></h3>
               <div class="news__item-btn">
-                <a class="btn btn-secondary" href="#">Read More</a>
+                <a href="#" class="btn <%=btn.class%>" target="_blank"><%=btn.text%></a>
                 <svg
                   width="24"
                   height="25"
@@ -72,6 +77,7 @@
                   />
                 </svg>
               </div>
+              <%})%>
             </div>
           </div>
         </div>
@@ -81,26 +87,28 @@
               <img src="./img/news.png" alt="" />
             </div>
             <div class="news__item-content">
-              <time>19.03.2024</time>
-              <h3>Post-Election Intel Series: Portugal</h3>
-              <div class="news__item-btn">
-                <a class="btn btn-secondary" href="#">Read More</a>
-                <svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14 16.5542L18 12.5542M18 12.5542L14 8.5542M18 12.5542L6 12.5542"
-                    stroke="#2D56A3"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+              <%news.forEach((news) => {%>
+                <time><%=news.time%></time>
+                <h3><%=news.title%></h3>
+                <div class="news__item-btn">
+                  <a href="#" class="btn <%=btn.class%>" target="_blank"><%=btn.text%></a>
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 16.5542L18 12.5542M18 12.5542L14 8.5542M18 12.5542L6 12.5542"
+                      stroke="#2D56A3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <%})%>
             </div>
           </div>
         </div>
@@ -110,26 +118,28 @@
               <img src="./img/news.png" alt="" />
             </div>
             <div class="news__item-content">
-              <time>19.03.2024</time>
-              <h3>Post-Election Intel Series: Portugal</h3>
-              <div class="news__item-btn">
-                <a class="btn btn-secondary" href="#">Read More</a>
-                <svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14 16.5542L18 12.5542M18 12.5542L14 8.5542M18 12.5542L6 12.5542"
-                    stroke="#2D56A3"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+              <%news.forEach((news) => {%>
+                <time><%=news.time%></time>
+                <h3><%=news.title%></h3>
+                <div class="news__item-btn">
+                  <a href="#" class="btn <%=btn.class%>" target="_blank"><%=btn.text%></a>
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 16.5542L18 12.5542M18 12.5542L14 8.5542M18 12.5542L6 12.5542"
+                      stroke="#2D56A3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <%})%>
             </div>
           </div>
         </div>
@@ -139,28 +149,28 @@
               <img src="./img/news.png" alt="" />
             </div>
             <div class="news__item-content">
-              <time>19.03.2024</time>
-              <h3>
-                Post-Election Intel Series: Portugalvhbdvfvkdfvb dfkvdfkvdfvbfjv
-              </h3>
-              <div class="news__item-btn">
-                <a class="btn btn-secondary" href="#">Read More</a>
-                <svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14 16.5542L18 12.5542M18 12.5542L14 8.5542M18 12.5542L6 12.5542"
-                    stroke="#2D56A3"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+              <%news.forEach((news) => {%>
+                <time><%=news.time%></time>
+                <h3><%=news.title%></h3>
+                <div class="news__item-btn">
+                  <a href="#" class="btn <%=btn.class%>" target="_blank"><%=btn.text%></a>
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 16.5542L18 12.5542M18 12.5542L14 8.5542M18 12.5542L6 12.5542"
+                      stroke="#2D56A3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <%})%>
             </div>
           </div>
         </div>
