@@ -47,27 +47,26 @@
         },
     }) %>
     <%= _.template(require('./../includes/strategy.html').default)({
-      additionalClass: "",
+      additionalClass: "strategy--small",
       title: "Quality Management",
       strategy: [
-          { 
-              title: "1/ Your Project Success is Our Priority",
-              text: [
-                  "MiCiM has a proven track record within construction and engineering, working to exacting standards. Our engineers have extensive design experience from feasibility through to construction and are proficient in managing quality.",
-                  "We ensure the right level of experience is placed on every project at an early stage to avoid the pitfalls that can lead to avoidable programme pressure.",
-                  "Through our extensive delivery knowledge, we have utilised several industry recognised design gateway processes (ASHRAE, ATP, RIBA) and are proficient in managing these processes to ensure a high-quality output.",
-                  "Quality control is the basis for:",
-              ],
-              paragraph: [
-                  "Appearance.",
-                  "Fitness for purpose.",
-                  "Successful commissioning.",
-                  "Long and reliable service life",
-              ]
+          {
+            title:"",
+            text: [
+              "MiCiM has a proven track record within construction and engineering, working to exacting standards. Our engineers have extensive design experience from feasibility through to construction and are proficient in managing quality.",
+              "We ensure the right level of experience is placed on every project at an early stage to avoid the pitfalls that can lead to avoidable programme pressure.",
+              "Through our extensive delivery knowledge, we have utilised several industry recognised design gateway processes (ASHRAE, ATP, RIBA) and are proficient in managing these processes to ensure a high-quality output.",
+              "Quality control is the basis for:",
+          ],
+          paragraph: [
+              "Appearance.",
+              "Fitness for purpose.",
+              "Successful commissioning.",
+              "Long and reliable service life",
+            ]
           },
-  
           { 
-              title: "2/ Effective Project Management",
+            title: "",  
               text: "Effective Project Management is key to the success of any project, and delivering successful projects for our clients is our priority. In this rapidly expanding, demanding and results-orientated industry we are committed to assisting our clients in achieving their project goals and best possible outcomes from inception to completion. This is achieved by working with our clients to set out the project objectives from inception, ensuring they are clear, concise and achievable. We set the highest possible standards relating to project delivery, health and safety, quality and sustainability."
           }
       ]
