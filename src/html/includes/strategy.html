@@ -5,6 +5,7 @@
             <% strategy.forEach(function(item, index) { %>
                 <div class="strategy__grid-item">
                     <h3><%= item.title %></h3>
+                    
                     <% if (Array.isArray(item.text)) { %>
                         <% item.text.forEach(function(paragraph) { %>
                             <p><%= paragraph %></p>
@@ -12,8 +13,17 @@
                     <% } else if (item.text) { %>
                         <p><%= item.text %></p>
                     <% } %>
+            
+                    <!-- Перевірка на масив paragraph, якщо він є, вивести його як список -->
+                    <% if (Array.isArray(item.paragraph)) { %>
+                        <ul>
+                            <% item.paragraph.forEach(function(paragraphItem) { %>
+                                <li><%= paragraphItem %></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
                 </div>
-            <% }); %>
+            <% }); %>          
         </div>
     </div>
 </section>
