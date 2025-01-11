@@ -27,6 +27,9 @@
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 12px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
   }
   &-content {
@@ -38,10 +41,8 @@
   }
 }
 
-
 @media (max-width: 900px) {
   .strategy__grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-

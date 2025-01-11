@@ -19,7 +19,23 @@
         },
       }) %>
       <%= _.template(require('./../includes/strategy.html').default)({
-
+        additionalClass: "",
+        title: "",
+        strategy: [
+            { title: "Project Management" },
+            { 
+              title: "1/ Your Project Success is Our Priority",
+              text: "Effective Project Management is key to the success of any project, and delivering successful projects for our clients is our priority. In this rapidly expanding, demanding and results-orientated industry we are committed to assisting our clients in achieving their project goals and best possible outcomes from inception to completion. This is achieved by working with our clients to set out the project objectives from inception, ensuring they are clear, concise and achievable. We set the highest possible standards relating to project delivery, health and safety, quality and sustainability."
+            },
+            { 
+              title: "2/ Expert Teams, Proven Delivery",
+              text: "Our Project Management teams bring a wealth of detailed technical knowledge, Project Management expertise and Data Centre experience to ensure our projects are delivered successfully. We provide a pragmatic hands-on approach from project inception, through planning, procurement, pre-construction activities, design and construction to completion, working closely and collaboratively with our clients and project teams."
+            },
+            { 
+              title: "3/ Adapting to Change, Together",
+              text: "With our advanced management tools and processes, and in-depth knowledge of industry standards, we work alongside our clients ensuring they are provided with timely, accurate updates and strategic advice, enabling risks and issues to be understood and assessed leading to prompt, informed decision making. Our agility enables us to adapt to change and our clients’ needs in this ever-changing environment, ensuring that project governance is followed and that key stakeholders are updated through the project life-cycle."
+            }
+        ]
     }) %>
     <%= _.template(require('./../includes/news.html').default)({
         title: "News & <span>Insights</span>",
@@ -30,6 +46,25 @@
           class: "btn-secondary",
         },
     }) %>
+    <%= _.template(require('./../includes/strategy.html').default)({
+      additionalClass: "",
+      title: "Quality Management",
+      strategy: [
+          { 
+            title: "1/ Your Project Success is Our Priority",
+            text: [
+              "MiCiM has a proven track record within construction and engineering, working to exacting standards. Our engineers have extensive design experience from feasibility through to construction and are proficient in managing quality.",
+              "We ensure the right level of experience is placed on every project at an early stage to avoid the pitfalls that can lead to avoidable programme pressure.",
+              "Through our extensive delivery knowledge, we have utilised several industry recognised design gateway processes (ASHRAE, ATP, RIBA) and are proficient in managing these processes to ensure a high-quality output.",
+              "Quality control is the basis for:",
+            ]
+          },
+          { 
+            title: "1/ Your Project Success is Our Priority",
+            text: "Effective Project Management is key to the success of any project, and delivering successful projects for our clients is our priority. In this rapidly expanding, demanding and results-orientated industry we are committed to assisting our clients in achieving their project goals and best possible outcomes from inception to completion. This is achieved by working with our clients to set out the project objectives from inception, ensuring they are clear, concise and achievable. We set the highest possible standards relating to project delivery, health and safety, quality and sustainability."
+          }
+      ]
+  }) %>
 </main>
 <%= _.template(require('./../includes/footer.html').default)(data) %>
 <%=_.template(require('./../includes/sidebar.html').default)(data) %>   
