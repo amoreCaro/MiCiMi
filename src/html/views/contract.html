@@ -1,0 +1,67 @@
+<% var data = { title: "Menegement" }; %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
+<main class="page__main">
+    <%= _.template(require('./../includes/banner.html').default)({
+        title: "Contract & Cost Advisory Services",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco laboris.",
+        image: "img/contract-banner__image.png",
+        btn: {
+          text: "",
+          class: "",
+        },
+        additionalClass: "banner--small" 
+      }) %>
+      <%= _.template(require('./../includes/quote.html').default)({
+          text: "Whether you're a seasoned professional or just starting your career, we offer a diverse range of opportunities across the mission critical sector. Explore our current openings and discover how you can be a part of an extraordinary team.",
+          btn: {
+            text: "",
+            class: "",
+          },
+        }) %>
+        <%= _.template(require('./../includes/strategy.html').default)({
+            additionalClass: "strategy--small",
+            title: "",
+            strategy: [
+                {
+                  title:"Strategic Consulting Advisory Services",
+                },
+                { 
+                  title: "",  
+                    text: [
+                      "At MiCiM, our strong focus on engineering, problem-solving, and extensive experience enables us to deliver bespoke solutions that seamlessly transition from strategy to operation, ensuring the realisation of planned benefits. Our Strategic Consulting Advisory Service team collaborates with senior management to develop and implement strategic plans aligned with business objectives, providing actionable insights and recommendations to drive informed decisions and gain a competitive edge.",
+                      "We assess the current state of the organisation, identify opportunities and challenges, and create tailored strategies to enhance growth, performance, and profitability. Our services include strategic planning, market analysis, business strategy development, performance improvement, organisational design, change management, and risk management. These services are essential for helping organisations adapt to market dynamics, overcome challenges, and achieve sustainable success."
+                    ]
+                }
+            ]
+        }) %>
+        <%= _.template(require('./../includes/strategy.html').default)({
+            additionalClass: "",
+            title: "",
+            strategy: [
+                {
+                  title:"Document Control",
+                  text: [
+                    "MiCiM specialises in offering Document Control as a service, specifically tailored to manage documents throughout the entire lifecycle of a project. From initial planning and development to execution, monitoring, and project close-out, MiCiM ensures that all project-related documents are effectively organised, tracked, and controlled. By implementing robust document management systems and workflows, MiCiM enables seamless collaboration among project stakeholders, facilitates efficient document creation, review, and approval processes, and ensures compliance with project requirements and industry standards. With MiCiM's expertise in managing documents through every stage of the project lifecycle, organisations can enhance transparency, mitigate risks, and optimise project outcomes.",
+                    " MiCiM partner with Procore Technologies Document Management Systems to offer this service, however we can also adopt client-preferred EDMS systems as required and our Document Controllers have extensive experience with various other platforms."
+                  ]
+                },
+                { 
+                  title: "KPI Tracking",  
+                    text: [
+                        "MiCiM offers Key Performance Indicator (KPI) tracking, providing businesses with a comprehensive solution to monitor and optimise their performance metrics. Leveraging advanced analytics and data visualisation tools, MiCiM enables clients to set, track, and analyse KPIs relevant to their specific objectives and industry standards. Whether it's enhancing operational efficiency, improving customer satisfaction, or driving revenue growth, MiCiM's KPI tracking service empowers organisations to make data-driven decisions and achieve their strategic goals. With customisable dashboards, real-time monitoring capabilities, and insightful reports, MiCiM ensures that businesses have the actionable insights they need to stay agile and competitive in today's dynamic market landscape."
+                    ]
+                }
+            ]
+        }) %>
+        <%= _.template(require('./../includes/news.html').default)({
+            title: "News & <span>Insights</span>",
+                text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
+                image: "img/info__image.png",
+                btn: {
+                text: "Read More",
+                class: "btn-secondary",
+            },
+        }) %>
+</main>
+<%= _.template(require('./../includes/footer.html').default)(data) %>
+<%=_.template(require('./../includes/sidebar.html').default)(data) %>   
