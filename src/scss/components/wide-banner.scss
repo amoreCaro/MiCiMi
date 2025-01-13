@@ -1,4 +1,7 @@
 .wide-banner {
+    &__container {
+        position: relative;
+    }
   & h2 {
     margin-bottom: 40px;
   }
