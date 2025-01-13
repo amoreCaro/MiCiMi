@@ -18,41 +18,43 @@
             class: "",
           },
         }) %>
-        <%= _.template(require('./../includes/strategy.html').default)({
-            additionalClass: "strategy--small",
-            title: "",
-            strategy: [
-                {
-                  title:"Strategic Consulting Advisory Services",
-                },
-                { 
-                  title: "",  
-                    text: [
-                      "At MiCiM, our strong focus on engineering, problem-solving, and extensive experience enables us to deliver bespoke solutions that seamlessly transition from strategy to operation, ensuring the realisation of planned benefits. Our Strategic Consulting Advisory Service team collaborates with senior management to develop and implement strategic plans aligned with business objectives, providing actionable insights and recommendations to drive informed decisions and gain a competitive edge.",
-                      "We assess the current state of the organisation, identify opportunities and challenges, and create tailored strategies to enhance growth, performance, and profitability. Our services include strategic planning, market analysis, business strategy development, performance improvement, organisational design, change management, and risk management. These services are essential for helping organisations adapt to market dynamics, overcome challenges, and achieve sustainable success."
-                    ]
-                }
-            ]
-        }) %>
+
+        <%= _.template(require('./../includes/two-image.html').default)({
+            additionalClass: "", 
+            title: "Cost Management", 
+            item: {
+              textLeft: [
+                "Our cost management team provides cost, commercial and contractual advice and professional quantity surveying services to clients, designers and other consultants.",
+                "MiCiM’s cost management service has been established to be able to specifically tailor and deliver a personalised, dedicated and valuable service to each of our particular clients that suits their needs, business requirements and successfully recognises our clients’ unique project objectives and delivers the project goals."
+              ],
+              textRight: [
+                "Our cost management team is focused on delivering an effective cost and commercial management service addressing complete project budgets and the successful delivery of projects. We recognise the initial design development and response to the client’s brief and requirements will determine the magnitude of the anticipated budget and project outcome. We therefore strive to be integrated into the design process from the outset to advise the cost impact of design proposals and help shape the design to the approved budget and achieve the client’s aspirations."
+              ],    
+              image1: "img/two-image__img-1.png",
+              image2: "img/two-image__img-2.png"
+            },
+            decor: "img/two-image__decor.png"
+          }) %>
+          
+          
+
         <%= _.template(require('./../includes/strategy.html').default)({
             additionalClass: "",
             title: "",
             strategy: [
                 {
-                  title:"Document Control",
-                  text: [
-                    "MiCiM specialises in offering Document Control as a service, specifically tailored to manage documents throughout the entire lifecycle of a project. From initial planning and development to execution, monitoring, and project close-out, MiCiM ensures that all project-related documents are effectively organised, tracked, and controlled. By implementing robust document management systems and workflows, MiCiM enables seamless collaboration among project stakeholders, facilitates efficient document creation, review, and approval processes, and ensures compliance with project requirements and industry standards. With MiCiM's expertise in managing documents through every stage of the project lifecycle, organisations can enhance transparency, mitigate risks, and optimise project outcomes.",
-                    " MiCiM partner with Procore Technologies Document Management Systems to offer this service, however we can also adopt client-preferred EDMS systems as required and our Document Controllers have extensive experience with various other platforms."
-                  ]
+                  title:"Procurement Advice  & Management",
                 },
                 { 
-                  title: "KPI Tracking",  
+                  title: "1/",  
                     text: [
-                        "MiCiM offers Key Performance Indicator (KPI) tracking, providing businesses with a comprehensive solution to monitor and optimise their performance metrics. Leveraging advanced analytics and data visualisation tools, MiCiM enables clients to set, track, and analyse KPIs relevant to their specific objectives and industry standards. Whether it's enhancing operational efficiency, improving customer satisfaction, or driving revenue growth, MiCiM's KPI tracking service empowers organisations to make data-driven decisions and achieve their strategic goals. With customisable dashboards, real-time monitoring capabilities, and insightful reports, MiCiM ensures that businesses have the actionable insights they need to stay agile and competitive in today's dynamic market landscape."
+                        "Once a robust budget and design solution is developed, the next crucial step in delivering a project is selecting the most suitable contractor through the appropriate procurement route. Our motto, “Buy it once and buy it right,” reflects our commitment to strategic procurement. MiCiM provides expert procurement advice and manages the process, developing a tailored procurement strategy that aligns with the project's unique drivers and objectives.",
+                        "We collaborate with the client in a procurement workshop to establish priorities, assess contractual arrangements, and ensure all options are considered. MiCiM leads the preparation and management of tender documents, overseeing the tender process, including analysis, negotiation, and contractor appointment. By clearly defining project constraints and requirements at the tender stage, we ensure contractors submit transparent, accurate proposals, giving clients confidence in the tender pricing"
                     ]
                 }
             ]
         }) %>
+
         <%= _.template(require('./../includes/news.html').default)({
             title: "News & <span>Insights</span>",
                 text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",

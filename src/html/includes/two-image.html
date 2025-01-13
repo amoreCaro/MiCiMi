@@ -1,0 +1,40 @@
+<section class="two-image two-image--<%= additionalClass %>" data-aos="fade-up" data-aos-duration="2000">
+    <div class="two-image__container container">
+        <div class="two-image__left">
+            <h2><%= title %></h2>
+            <!-- Left-side Text Container -->
+            <div class="two-image__text-container two-image__text-container--left">
+                <% if (Array.isArray(item.textLeft)) { %>
+                    <% item.textLeft.forEach(function(paragraph) { %>
+                        <p><%= paragraph %></p>
+                    <% }); %>
+                <% } else if (item.textLeft) { %>
+                    <p><%= item.textLeft %></p>
+                <% } %>
+            </div>
+            <!-- First Image -->
+            <img src="<%= item.image1 %>" alt="Image 1">
+        </div>
+        
+        <div class="two-image__right">
+            <!-- Second Image -->
+            <img src="<%= item.image2 %>" alt="Image 2">
+            
+            <!-- Right-side Text Container -->
+            <div class="two-image__text-container two-image__text-container--right">
+                <% if (Array.isArray(item.textRight)) { %>
+                    <% item.textRight.forEach(function(paragraph) { %>
+                        <p><%= paragraph %></p>
+                    <% }); %>
+                <% } else if (item.textRight) { %>
+                    <p><%= item.textRight %></p>
+                <% } %>
+            </div>
+        </div>
+        
+        <!-- Image Decor Section -->
+        <div class="two-image__decor">
+            <img src="<%= decor %>" alt="Image Decor">
+        </div>
+    </div>
+</section>

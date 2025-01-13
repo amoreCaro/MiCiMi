@@ -1,0 +1,35 @@
+.two-image {
+  &__container {
+    display: flex;
+    position: relative;
+  }
+  &__left {
+    margin-right: 115px;
+  }
+  &__text-container p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $text-color;
+  }
+  &__text-container--left {
+    margin-bottom: 40px;
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__right img {
+    margin-bottom: 40px;
+  }
+  &__decor {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+  }
+  & h2 {
+    margin-bottom: 24px;
+  }
+}
