@@ -37,6 +37,26 @@
             }
         ]
     }) %>
+
+    <%= _.template(require('./../includes/info.html').default)({
+      additionalClass: "info--large",
+      title: "Risk Management",
+      text: [
+        "Our senior management have substantial experience of advising our clients on good risk management practice and can provide professional advice on approaches on setting strategy, the application of risk management and governance, strengthening resilience and in setting up holistic processes.",
+        "Risk management is a key activity in our governance framework and is a core component of our Project Management Toolkit, which has been developed by our senior project executives, and is supplemented by dedicated risk management training.",
+        "Projects necessarily incorporate an element of risk as a consequence of achieving the opportunities created by delivering the project. Ultimately a successful project is one in which inherent risks have been assessed and successfully managed, and a failed or challenged project is one in which risks have not been properly assessed and therefore not managed."
+      ],
+      btn: {
+        text: "",
+        class: "",
+      },
+      image: "img/project-management-info__image.png",
+      decor: [
+        "img/project-management-info__decor-1.png",
+        "img/project-management-info__decor-2.png"
+      ],
+    }) %>
+
     <%= _.template(require('./../includes/news.html').default)({
         title: "News & <span>Insights</span>",
         text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",

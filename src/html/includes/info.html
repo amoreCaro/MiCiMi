@@ -1,26 +1,33 @@
-<section class="info section" data-aos="fade-up"  data-aos-duration="2000">
-    <div class="info__container container">
-        <div class="info__content">
-            <div class="info__text">
-                <h3><%=title%></h3>
-                <%if (typeof text !== 'undefined') {%>
-                  <p><%=text%></p>
-                <%}%>
-              </div>
-              <div class="info__btn">
-                <a href="#" class="btn <%=btn.class%>" target="_blank"><%=btn.text%></a>
-              </div>
-            </div>
-            <% if (typeof image !== 'undefined') { %>
-              <div class="info__image">
-                <img src="<%= image %>" alt="" />
-              </div>
-            <% } %>
-            <% if (typeof decor !== 'undefined') { %>
-              <div class="info__decor">
-                <img src="<%= decor %>" alt="" />
-              </div>
-            <% } %>
-        </div>
+<section class="info section <%=additionalClass%>" data-aos="fade-up" data-aos-duration="2000">
+  <div class="info__container container">
+    <div class="info__content">
+      <div class="info__text">
+        <h3><%= title %></h3>
+        
+        <% if (Array.isArray(text)) { %>
+          <% text.forEach(function(paragraph) { %>
+            <p><%= paragraph %></p>
+          <% }); %>
+        <% } else if (text) { %>
+          <p><%= text %></p>
+        <% } %>
+      </div>
+      
+      <div class="info__btn">
+        <a href="#" class="btn <%= btn.class %>" target="_blank"><%= btn.text %></a>
+      </div>
     </div>
+
+    <% if (typeof image !== 'undefined') { %>
+      <div class="info__image">
+        <img src="<%= image %>" alt="" />
+      </div>
+    <% } %>
+    
+    <% if (typeof decor !== 'undefined') { %>
+      <div class="info__decor">
+        <img src="<%= decor %>" alt="" />
+      </div>
+    <% } %>
+  </div>
 </section>
