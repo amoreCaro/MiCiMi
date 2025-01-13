@@ -2,6 +2,7 @@
   &__container {
     display: flex;
     position: relative;
+    overflow: hidden;
   }
   &__left {
     margin-right: 115px;
@@ -16,6 +17,7 @@
   &__text-container--left {
     margin-bottom: 40px;
     & img {
+      max-width: 611px;
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -23,6 +25,12 @@
   }
   &__right img {
     margin-bottom: 40px;
+    & img {
+      max-width: 654px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
   &__decor {
     position: absolute;
@@ -31,5 +39,21 @@
   }
   & h2 {
     margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .two-image__left {
+        margin: 0px;
+    }
+  .two-image__container {
+    flex-direction: column;
+    gap: 40px;
+    & img {
+        width: 100%;
+    }
+  }
+  .two-image__decor {
+    display: none;
   }
 }
