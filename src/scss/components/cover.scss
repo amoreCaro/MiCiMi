@@ -28,7 +28,6 @@
     & img {
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
-      width: 100%;
       height: auto;
       object-fit: cover;
     }
@@ -36,7 +35,6 @@
 
   &__decor {
     position: absolute;
-
     bottom: 0;
     overflow: hidden;
   }
@@ -69,7 +67,6 @@
   }
   .cover__text {
     flex-direction: column;
-    // margin-bottom: 36px;
     & h2 {
       margin-bottom: 24px;
     }
@@ -95,11 +92,20 @@
     }
   }
   .cover__sectors {
-    width: 90%;
     padding: 30px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 50px;
     & p {
       font-size: 24px;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+    .cover__image img {
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      // width: initial !important;
+      height: auto;
+      object-fit: cover;
     }
   }
 
@@ -110,7 +116,6 @@
 
 @media (max-width: 425px) {
   .cover__text {
-    margin-bottom: 160px;
     display: block;
     & h2 {
       font-size: 32px;
@@ -119,12 +124,6 @@
     & p {
       max-width: 325px;
     }
-  }
-}
-@media (max-width: 375px) {
-  .cover__text {
-    margin-bottom: 300px;
-    display: block;
   }
 }
 
