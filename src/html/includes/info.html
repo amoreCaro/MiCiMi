@@ -24,10 +24,13 @@
       </div>
     <% } %>
     
-    <% if (typeof decor !== 'undefined') { %>
+    <% if (typeof decor !== 'undefined' && decor.length > 0) { %>
       <div class="info__decor">
-        <img src="<%= decor %>" alt="" />
+        <% _.each(decor, function(image) { %>
+          <img src="<%= image %>" alt="" />
+        <% }); %>
       </div>
     <% } %>
+    
   </div>
 </section>

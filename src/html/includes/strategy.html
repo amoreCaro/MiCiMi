@@ -1,5 +1,5 @@
 <section class="strategy section <%= additionalClass %>" data-aos="fade-up" data-aos-duration="2000">
-    <div class="strategy__container container">
+    <div class="strategy__container container h-content">
         <h2><%= title %></h2>
         <div class="strategy__grid">
             <% strategy.forEach(function(item, index) { %>
@@ -13,14 +13,16 @@
                     <% } else if (item.text) { %>
                         <p><%= item.text %></p>
                     <% } %>
-            
+
                     <!-- Перевірка на масив paragraph, якщо він є, вивести його як список -->
                     <% if (Array.isArray(item.paragraph)) { %>
-                        <ul>
-                            <% item.paragraph.forEach(function(paragraphItem) { %>
-                                <li><%= paragraphItem %></li>
-                            <% }); %>
-                        </ul>
+                        <p>
+                            <ul>
+                                <% item.paragraph.forEach(function(paragraphItem) { %>
+                                    <li><%= paragraphItem %></li>
+                                <% }); %>
+                            </ul>
+                        </p>
                     <% } %>
                 </div>
             <% }); %>          

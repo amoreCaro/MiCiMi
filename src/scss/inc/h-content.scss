@@ -1,6 +1,5 @@
 .h-content {
   & h1 {
-    font-weight: bold;
     font-size: 48px;
     line-height: 52px;
     color: $black;
@@ -11,7 +10,6 @@
   }
 
   & h2 {
-    font-weight: bold;
     font-size: 40px;
     line-height: 43px;
     color: $black;
@@ -22,7 +20,6 @@
   }
 
   & h3 {
-    font-weight: bold;
     font-size: 32px;
     line-height: 36px;
     color: $black;
@@ -43,6 +40,21 @@
     }
     & i {
       font-style: italic;
+    }
+    & ul,
+    ol {
+      margin: 0px;
+      & li {
+        gap: 12px;
+        color: $text-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 32px 0px;
+        &::marker {
+          color: $black;
+        }
+      }
     }
   }
 
