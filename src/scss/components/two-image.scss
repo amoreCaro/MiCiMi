@@ -43,17 +43,30 @@
 }
 
 @media (max-width: 1024px) {
-    .two-image__left {
-        margin: 0px;
-    }
+  .two-image__left {
+    margin: 0px;
+  }
   .two-image__container {
     flex-direction: column;
     gap: 40px;
     & img {
-        width: 100%;
+      width: 100%;
     }
   }
   .two-image__decor {
     display: none;
+  }
+}
+
+.two-image--reverse {
+  .two-image__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .two-image__left {
+    margin-right: 0px;
+  }
+  .two-image__right {
+    margin-right: 115px;
   }
 }
