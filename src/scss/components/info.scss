@@ -1,5 +1,4 @@
 .info {
-  margin-bottom: 0px;
   &__container {
     z-index: 0;
     position: relative;
@@ -68,6 +67,23 @@
   }
 }
 
+.info--small {
+  .info__image {
+    min-height: 568px;
+  }
+  .info__content {
+    max-width: 461px;
+    width: 100%;
+  }
+}
+
+.info--medium {
+  .info__image img {
+    min-height: 571px;
+    width: auto;
+  }
+}
+
 // Modifications
 .info--large {
   & h3 {
@@ -99,15 +115,7 @@
   }
 }
 
-.info--small {
-  .info__image {
-    min-height: 568px;
-  }
-  .info__content {
-    max-width: 461px;
-    width: 100%;
-  }
-}
+
 @media (max-width: 1024px) {
   .info--large {
     .info__image {

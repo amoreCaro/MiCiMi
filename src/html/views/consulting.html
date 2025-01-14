@@ -38,6 +38,24 @@
             ]
         }) %>
 
+        <%= _.template(require('./../includes/info.html').default)({
+          additionalClass: "info--medium",
+          title: "Project Governance / PMO",
+          text: [
+            "Project governance is a framework that guides how an organisation makes key project decisions, ensuring direction, informed decision-making, and oversight. MiCiM applies the three pillars of good governance—information, people, and structure—to its project governance framework, ensuring high-quality project management. This framework encompasses change management, risk management, reporting, meetings, stakeholder engagement, and communication, with key principles including:",
+            "The framework defines the responsibilities of both the project team and MiCiM's senior management, who are not involved in daily delivery but ensure alignment with the client’s governance framework, involving their senior management and key stakeholders.",
+            "This approach is supported by MiCiM's internal PMO, which manages internal systems, maintains the framework, and utilises Procore, our EDMS. Our senior management also advises clients on good governance practices, assists in setting up internal systems, and participates in or establishes project boards, including for multi-owned projects."
+          ],
+          btn: {
+            text: "",
+            class: "",
+          },
+          image: "img/consulting-info__image.png",
+          decor: [
+            ""
+          ],
+        }) %>
+
         <%= _.template(require('./../includes/strategy.html').default)({
           additionalClass: "strategy--heading-paragraph, strategy--small-items",
           headingClass: "text--column",
@@ -84,6 +102,24 @@
                 text: "We have embraced 4D planning offering real-time programme updates and visual representations through automated dashboards and BIM models."
               }
           ]
+      }) %>
+
+      <%= _.template(require('./../includes/two-image.html').default)({
+        additionalClass: "", 
+        leftTitle: "EDMS Advisory Services", 
+        item: {
+          textLeft: [
+            "MiCiM extends Electronic Document Management System (EDMS) Advisory Services, catering to organisations seeking streamlined document handling and information management solutions. With a deep understanding of industry best practices and technological advancements, MiCiM guides clients in selecting, implementing, and optimising EDMS tailored to their specific needs and workflows. From document digitisation to version control and access permissions, MiCiM's advisory services cover every aspect of EDMS deployment and utilisation. By leveraging EDMS, organisations can enhance collaboration, ensure compliance with regulatory requirements, and boost overall productivity. MiCiM's expert guidance empowers businesses to harness the full potential of EDMS, transforming their document management processes into efficient, secure, and scalable systems that drive success in the digital age.",          
+          ],
+          rightTitle: "Due Diligence Management",
+          textRight: [
+            "Overall, effective due diligence management enables our clients to make informed decisions, minimise risks, maximise value, and ensure the success of the transaction. It requires thorough planning, rigorous analysis and collaboration among various stakeholders, including financial experts, legal advisors, industry specialists and operational managers.",
+            "At MiCiM we understand the needs of our clients who often need to assess the risks, opportunities and potential impacts of a transaction quickly.  In order for our clients to make those important decisions promptly they must have the right level of information to allow the decision-makers to evaluate the viability, value, and potential implications of the transaction, as well as identify any risks or issues that may affect the outcome. Our EMEA-wide specialists understand what the big-ticket items are in our sectors and how prioritising answers will save our clients time and money. Our dedicated team can support clients with both pre-purchase land acquisitions and asset disposals."
+          ],    
+          image1: "img/two-image__img-1.png",
+          image2: "img/two-image__img-2.png"
+        },
+        decor: "img/two-image__decor.png"
       }) %>
 
       <%= _.template(require('./../includes/wide-banner.html').default)({

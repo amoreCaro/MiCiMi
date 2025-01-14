@@ -1,7 +1,7 @@
 <section class="two-image <%= additionalClass %>" data-aos="fade-up" data-aos-duration="2000">
     <div class="two-image__container container">
         <div class="two-image__left">
-            <h2><%= title %></h2>
+            <h2><%= leftTitle %></h2>
             <!-- Left-side Text Container -->
             <div class="two-image__text-container two-image__text-container--left">
                 <% if (Array.isArray(item.textLeft)) { %>
@@ -19,6 +19,7 @@
         <div class="two-image__right">
             <!-- Second Image -->
             <img src="<%= item.image2 %>" alt="Image 2">
+            <h2><%= item.rightTitle %></h2>  <!-- Access rightTitle via item object -->
             
             <!-- Right-side Text Container -->
             <div class="two-image__text-container two-image__text-container--right">

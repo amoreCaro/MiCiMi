@@ -21,17 +21,18 @@
 
         <%= _.template(require('./../includes/two-image.html').default)({
             additionalClass: "", 
-            title: "Cost Management", 
+            leftTitle: "Cost Management", 
             item: {
               textLeft: [
                 "Our cost management team provides cost, commercial and contractual advice and professional quantity surveying services to clients, designers and other consultants.",
-                "MiCiM’s cost management service has been established to be able to specifically tailor and deliver a personalised, dedicated and valuable service to each of our particular clients that suits their needs, business requirements and successfully recognises our clients’ unique project objectives and delivers the project goals."
+                "MiCiM’s cost management service has been established to be able to specifically tailor and deliver a personalised, dedicated and valuable service to each of our particular clients that suits their needs, business requirements and successfully recognises our clients’ unique project objectives and delivers the project goals.",
               ],
+              rightTitle: "",
               textRight: [
-                "Our cost management team is focused on delivering an effective cost and commercial management service addressing complete project budgets and the successful delivery of projects. We recognise the initial design development and response to the client’s brief and requirements will determine the magnitude of the anticipated budget and project outcome. We therefore strive to be integrated into the design process from the outset to advise the cost impact of design proposals and help shape the design to the approved budget and achieve the client’s aspirations."
+                "Our cost management team is focused on delivering an effective cost and commercial management service addressing complete project budgets and the successful delivery of projects. We recognise the initial design development and response to the client’s brief and requirements will determine the magnitude of the anticipated budget and project outcome. We therefore strive to be integrated into the design process from the outset to advise the cost impact of design proposals and help shape the design to the approved budget and achieve the client’s aspirations.",
               ],    
               image1: "img/two-image__img-1.png",
-              image2: "img/two-image__img-2.png"
+              image2: "img/two-image__img-2.png",
             },
             decor: "img/two-image__decor.png"
           }) %>
