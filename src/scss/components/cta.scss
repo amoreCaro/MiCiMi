@@ -76,7 +76,7 @@
 
     & img {
       height: auto;
-      width: 80%;
+      // width: 80%;
       object-fit: contain;
       left: 20%;
     }
@@ -91,11 +91,10 @@
     padding-bottom: 24px;
   }
   .cta__content {
-    max-width: 320px;
     width: 100%;
   }
   .cta__text {
-    margin: 50px 0px;
+    margin: 32px 0px;
 
     & h1 {
       font-size: 26px;

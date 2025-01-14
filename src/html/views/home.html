@@ -28,7 +28,9 @@
           class: "btn-primary",
         },
         image: "img/info__image.png",
-        decor: "img/info__decor.png",
+        decor: [
+          "img/info__decor.png"
+        ],
       }) %>
       <%= _.template(require('./../includes/partners.html').default)({
         title: "In Good Company",
