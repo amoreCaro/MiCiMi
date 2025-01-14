@@ -40,3 +40,9 @@
     display: none;
   }
 }
+
+@media (max-width: 1024px) {
+  .text-col {
+    display: block;
+  }
+}

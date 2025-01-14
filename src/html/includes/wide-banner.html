@@ -10,7 +10,7 @@
     <div class="wide-banner__image">
       <img src="<%= image %>" alt="" />
     </div>
-    <div class="wide-banner__text">
+    <div class="wide-banner__text  <%= textClass %>">
       <% 
       // Ensure text is an array
       if (Array.isArray(text)) {
@@ -21,7 +21,7 @@
         }); 
       } else if (typeof text !== 'undefined') { 
       %>
-        <p><%= text %></p> <!-- If it's not an array, treat it as a single paragraph -->
+        <p><%= text %></p> 
       <% 
       } 
       %>
