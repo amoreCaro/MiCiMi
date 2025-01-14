@@ -102,6 +102,14 @@
     margin-bottom: 16px;
   }
 }
+.strategy__subtitle {
+  & p {
+    margin-bottom: 12px;
+    & span {
+      color: $accent-color;
+    }
+  }
+}
 
 @media (max-width: 1024px) {
   .strategy__text {

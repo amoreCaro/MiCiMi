@@ -4,9 +4,16 @@
             <% if (title != "") { %>
                 <h2><%= title %></h2>
             <% } %>
-            <% if (subtitle != "") { %>
-                <p><%= subtitle %></p>
-            <% } %>
+            
+            <div class="strategy__subtitle">
+                <% if (Array.isArray(subtitle)) { %>
+                    <% subtitle.forEach(function(subtitleItem) { %>
+                        <p><%= subtitleItem %></p>
+                    <% }); %>
+                <% } else if (subtitle) { %>
+                    <p><%= subtitle %></p>
+                <% } %>
+            </div>            
         </div>
         <div class="strategy__grid">
             <% strategy.forEach(function(item, index) { %>
@@ -21,7 +28,6 @@
                         <p><%= item.text %></p>
                     <% } %>
             
-                    <!-- Перевірка на масив paragraph, якщо він є, вивести його як список -->
                     <% if (Array.isArray(item.paragraph)) { %>
                         <p>
                             <ul>
