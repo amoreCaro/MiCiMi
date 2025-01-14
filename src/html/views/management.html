@@ -20,7 +20,9 @@
       }) %>
       <%= _.template(require('./../includes/strategy.html').default)({
         additionalClass: "",
+        headingClass: "",
         title: "",
+        subtitle: "",
         
         strategy: [
             { title: "Project Management" },
@@ -69,7 +71,9 @@
     }) %>
     <%= _.template(require('./../includes/strategy.html').default)({
       additionalClass: "strategy--small",
+      headingClass: "",
       title: "Quality Management",
+      subtitle: "",
       
       strategy: [
           {

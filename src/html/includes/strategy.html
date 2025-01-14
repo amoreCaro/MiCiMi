@@ -1,9 +1,11 @@
 <section class="strategy section <%= additionalClass %>" data-aos="fade-up" data-aos-duration="2000">
     <div class="strategy__container container h-content">
-        <div class="strategy__text">
-            <h2><%= title %></h2>
-            <% if (additionalClass.includes("small-items")) { %>
-                <p class="additional-paragraph">Ваш текст для додаткового абзацу</p>
+        <div class="strategy__text <%= headingClass %>">
+            <% if (title != "") { %>
+                <h2><%= title %></h2>
+            <% } %>
+            <% if (subtitle != "") { %>
+                <p><%= subtitle %></p>
             <% } %>
         </div>
         <div class="strategy__grid">

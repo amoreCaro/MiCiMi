@@ -21,7 +21,9 @@
 
         <%= _.template(require('./../includes/strategy.html').default)({
             additionalClass: "",
+            headingClass: "",
             title: "",
+            subtitle: "",
            
             strategy: [
               {
@@ -37,9 +39,14 @@
         }) %>
 
         <%= _.template(require('./../includes/strategy.html').default)({
-          additionalClass: "strategy--small-items",
+          additionalClass: "strategy--heading-paragraph, strategy--small-items",
+          headingClass: "text--column",
           title: "Planning and Scheduling",
-         
+          subtitle:[
+            "MiCiM’s utilisation of various market-leading planning software solutions has allowed us to adapt to our clients’ particular needs and develop a bespoke dashboard reporting system. This allows real-time automated dashboard reporting, demonstrating our commitment to providing clients with immediate access to key project insights, enabling data-driven decision-making and enhancing overall project management efficiency.",
+            "A full range of our planning services include:"
+          ],
+          
           strategy: [
               {
                 title: "Real-Time Automated Dashboard Reporting",
@@ -75,7 +82,6 @@
               }
           ]
       }) %>
-  
 
       <%= _.template(require('./../includes/wide-banner.html').default)({
         title: "Project Monitoring and Assurance",
@@ -84,14 +90,15 @@
           "A key focus of project assurance or monitoring is that project status remains in line with the key metrics identified during project appraisal (or the business plan), such as capital cost, execution timeline, risk, change, operating cost-plan and revenue expectations."
         ],
         image: "img/consulting-wide-banner__image.png",
-        decor: "img/contract-wide-banner__decor.png",
+        decor: "img/consulting-wide-banner__decor.png",
         additionalClass: ""
       }) %>
       
-
         <%= _.template(require('./../includes/strategy.html').default)({
           additionalClass: "strategy--large-heading",
+          headingClass: "",
           title: "",
+          subtitle: "",
          
           strategy: [
             {
