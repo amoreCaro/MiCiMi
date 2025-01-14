@@ -26,7 +26,6 @@
   }
   &__image {
     & img {
-      width: 100%;
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
       height: auto;
@@ -102,9 +101,9 @@
       }
     }
     .cover__image img {
+      width: 100%;
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
-      // width: initial !important;
       height: auto;
       object-fit: cover;
     }
@@ -141,6 +140,12 @@
   .cover__text p {
     max-width: 450px;
   }
+  .cover__image {
+    & img {
+      // width: 100%;
+    }
+  }
+
   .cover__decor {
     right: 30px;
     bottom: 30px;
