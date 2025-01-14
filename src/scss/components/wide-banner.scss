@@ -1,7 +1,13 @@
 .wide-banner {
-    &__container {
-        position: relative;
-    }
+  &__container {
+    position: relative;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
   & h2 {
     margin-bottom: 40px;
   }
