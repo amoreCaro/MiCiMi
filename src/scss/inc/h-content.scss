@@ -48,15 +48,15 @@
     margin-bottom: 0px;
   }
 
-  & a {
-    color: $accent-color;
-    text-decoration: underline;
-    font-size: 24px;
-    line-height: 42px;
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  // & a {
+  //   color: $accent-color;
+  //   text-decoration: underline;
+  //   font-size: 24px;
+  //   line-height: 42px;
+  //   &:hover {
+  //     text-decoration: none;
+  //   }
+  // }
   & figure {
     margin-bottom: 16px;
     & picture {
