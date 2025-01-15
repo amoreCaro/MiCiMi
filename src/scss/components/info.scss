@@ -78,9 +78,8 @@
 }
 
 .info--medium {
-  .info__image img {
-    min-height: 571px;
-    width: auto;
+  .info__text  {
+    max-width: 611px;
   }
 }
 
@@ -113,6 +112,10 @@
       left: 0px;
     }
   }
+}
+
+.info--consulting {
+  
 }
 
 

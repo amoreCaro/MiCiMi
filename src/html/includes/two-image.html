@@ -1,9 +1,10 @@
 <section class="two-image <%= additionalClass %>" data-aos="fade-up" data-aos-duration="2000">
     <div class="two-image__container container">
         <div class="two-image__left">
-            <h2><%= leftTitle %></h2>
             <!-- Left-side Text Container -->
             <div class="two-image__text-container two-image__text-container--left">
+                <h2><%= leftTitle %></h2>
+                
                 <% if (Array.isArray(item.textLeft)) { %>
                     <% item.textLeft.forEach(function(paragraph) { %>
                         <p><%= paragraph %></p>
