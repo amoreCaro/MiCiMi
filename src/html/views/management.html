@@ -40,9 +40,10 @@
             }
         ]
     }) %>
-
     <%= _.template(require('./../includes/info.html').default)({
       additionalClass: "info--large",
+      contentClass: "info--management",
+      decorPosition: "info__decor--management",  <!-- Параметр для декора -->
       title: "Risk Management",
       text: [
         "Our senior management have substantial experience of advising our clients on good risk management practice and can provide professional advice on approaches on setting strategy, the application of risk management and governance, strengthening resilience and in setting up holistic processes.",
@@ -59,6 +60,7 @@
         "img/project-management-info__decor-2.png"
       ],
     }) %>
+    
 
     <%= _.template(require('./../includes/news.html').default)({
         title: "News & <span>Insights</span>",

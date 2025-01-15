@@ -35,8 +35,12 @@
         </div>
         
         <!-- Image Decor Section -->
-        <div class="two-image__decor">
-            <img src="<%= decor %>" alt="Image Decor">
-        </div>
+        <% if (typeof decor !== 'undefined' && decor.length > 0) { %>
+            <div class="two-image__decor">
+              <% _.each(decor, function(image, index) { %>
+                <img class="<%= index === 1 ? 'decor-on-image' : 'decor-under-image' %>" src="<%= decor %>" alt="" />
+              <% }); %>
+            </div>
+          <% } %>
     </div>
 </section>

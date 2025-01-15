@@ -40,6 +40,8 @@
 
         <%= _.template(require('./../includes/info.html').default)({
           additionalClass: "info--medium",
+          contentClass: "",
+          decorPosition: "",
           title: "Project Governance / PMO",
           text: [
             "Project governance is a framework that guides how an organisation makes key project decisions, ensuring direction, informed decision-making, and oversight. MiCiM applies the three pillars of good governance—information, people, and structure—to its project governance framework, ensuring high-quality project management. This framework encompasses change management, risk management, reporting, meetings, stakeholder engagement, and communication, with key principles including:",
@@ -52,7 +54,7 @@
           },
           image: "img/consulting-info__image.png",
           decor: [
-            ""
+           
           ],
         }) %>
 
@@ -119,7 +121,11 @@
           image1: "img/consulting-two-image__img-1.png",
           image2: "img/consulting-two-image__img-2.png"
         },
-        decor: ""
+        
+        decor: [
+          "img/consulting-two-decor-2.png",
+          "img/consulting-two-decor-1.png"
+        ]
       }) %>
 
       <%= _.template(require('./../includes/wide-banner.html').default)({

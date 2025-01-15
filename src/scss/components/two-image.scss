@@ -34,7 +34,7 @@
   }
   &__decor {
     position: absolute;
-    bottom: 30px;
+    bottom: 24px;
     left: 0;
   }
   & h2 {
@@ -60,5 +60,20 @@
   }
   .two-image__decor {
     display: none;
+  }
+}
+
+.two-image--consulting {
+  .decor-under-image {
+    position: absolute;
+    bottom: 173%;
+    left: 196%;
+  }
+  
+  .decor-on-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1; 
   }
 }

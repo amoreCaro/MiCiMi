@@ -1,9 +1,8 @@
 <section class="info section <%=additionalClass%>" data-aos="fade-up" data-aos-duration="2000">
-  <div class="info__container container ">
-    <div class="info__content h-content">
+  <div class="info__container container">
+    <div class="info__content h-content <%=contentClass%>">
       <div class="info__text">
         <h3><%= title %></h3>
-
         <% if (Array.isArray(text)) { %>
           <% text.forEach(function(paragraph) { %>
             <p><%= paragraph %></p>
@@ -19,18 +18,19 @@
     </div>
 
     <% if (typeof image !== 'undefined') { %>
-      <div class="info__image">
-        <img src="<%= image %>" alt="" />
-      </div>
-    <% } %>
-    
-    <% if (typeof decor !== 'undefined' && decor.length > 0) { %>
-      <div class="info__decor">
-        <% _.each(decor, function(image) { %>
+      <div class="info__image-container">
+        <div class="info__image">
           <img src="<%= image %>" alt="" />
-        <% }); %>
+        </div>
+        
+        <% if (typeof decor !== 'undefined' && decor.length > 0) { %>
+          <div class="info__decor <%= decorPosition %>">
+            <% _.each(decor, function(image, index) { %>
+              <img class="<%= index === 1 ? 'decor-on-image' : 'decor-under-image' %>" src="<%= image %>" alt="" />
+            <% }); %>
+          </div>
+        <% } %>
       </div>
     <% } %>
-    
   </div>
 </section>
