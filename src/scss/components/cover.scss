@@ -1,7 +1,5 @@
 .cover {
   &__container {
-    background-color: $gray-light;
-    padding: 60px 30px 30px 30px;
     position: relative;
     overflow: auto;
     border-radius: 12px;
@@ -35,7 +33,7 @@
 
   &__decor {
     position: absolute;
-    bottom: 0;
+    // bottom: 0;
     overflow: hidden;
   }
   &__sectors {
@@ -43,7 +41,7 @@
     bottom: 0;
     left: 0;
     padding: 60px;
-    margin: 0 0 30px 30px;
+    // margin: 0 0 30px 30px;
     background-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(24px);
     border-top-right-radius: 100px;
@@ -135,22 +133,27 @@
     right: -165px;
   }
   .cover__image img {
-    width: 100%;
+    // width: 100%;
   }
 }
 
 .cover--services {
-  .cover__text p {
-    max-width: 450px;
+  .cover__container {
+    background-color: $gray-light;
+    // padding: 60px 30px 0px 30px !important;
+
   }
-  .cover__image {
-    & img {
-      // width: 100%;
+  .cover__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    & p {
+      // max-width: 450px;
     }
   }
+}
 
-  .cover__decor {
-    right: 30px;
-    bottom: 30px;
-  }
+.cover__decor {
+  right: 30px;
+  bottom: 30px;
 }
