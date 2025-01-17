@@ -84,13 +84,15 @@ img {
 }
 
 .section {
-  margin: 150px 0;
   width: 100%;
   &:first-child {
     margin-top: 0px;
   }
   &:last-child {
     margin-bottom: 30px;
+  }
+  &:not(:first-child) {
+    margin: 150px 0;
   }
 }
 
@@ -102,7 +104,7 @@ img {
 
 .container {
   margin: 0 auto;
-  width: calc(100% - 30px);
+  width: calc(100% - 60px);
   max-width: 1380px;
 }
 

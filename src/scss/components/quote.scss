@@ -14,7 +14,7 @@
     gap: 32px;
   }
   &__text {
-    max-width: 932px;
+    max-width: 842px;
     text-align: left;
     & p {
       font-size: 24px;
@@ -54,7 +54,13 @@
 
 // Modifications
 .quote--with-btn {
-  .quote__text p {
-    margin-bottom: 32px;
+  .quote {
+    height: 100%;
+    &__text {
+      max-width: 932px;
+      & p {
+        margin-bottom: 32px;
+      }
+    }
   }
 }
