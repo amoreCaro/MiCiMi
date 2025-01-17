@@ -2,6 +2,7 @@
 <%=_.template(require('./../includes/header.html').default)(data) %>
 <main class="page__main">
     <%= _.template(require('./../includes/banner.html').default)({
+        additionalClass: "",
         title: "Strategic Consulting Services",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco laboris.",
         image: "img/consalting-banner__image.png",
@@ -12,6 +13,7 @@
         additionalClass: "banner--small" 
       }) %>
       <%= _.template(require('./../includes/quote.html').default)({
+          additionalClass: "",
           text: "Whether you're a seasoned professional or just starting your career, we offer a diverse range of opportunities across the mission critical sector. Explore our current openings and discover how you can be a part of an extraordinary team.",
           btn: {
             text: "",
