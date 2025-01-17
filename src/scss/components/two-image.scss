@@ -66,14 +66,20 @@
 .two-image--consulting {
   .decor-under-image {
     position: absolute;
-    bottom: 173%;
-    left: 196%;
+    bottom: 632px;
+    left: 521px;
   }
-  
+
   .decor-on-image {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1; 
+    left: -30px;
+    bottom: 4px;
+    z-index: 1;
+  }
+  .two-image__right {
+    & img {
+      position: relative;
+      z-index: 1;
+    }
   }
 }
