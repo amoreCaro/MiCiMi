@@ -9,9 +9,9 @@
       <p><%=text%></p>
     </div>
 
-    <div class="cover__sectors">
+    <div class="cover__sectors" <% if (sectors.length === 0) { %> style="display: none;" <% } %>>
       <% sectors.forEach(function(sector) { %>
-      <p><%= sector %></p>
+        <p><%= sector %></p>
       <% }); %>
     </div>
 

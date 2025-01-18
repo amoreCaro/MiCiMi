@@ -1,7 +1,7 @@
 .cover {
   &__container {
     position: relative;
-    overflow: auto;
+    // overflow: auto;
     border-radius: 12px;
   }
   &__text {
@@ -34,7 +34,10 @@
   &__decor {
     position: absolute;
     // bottom: 0;
+    right: 0;
     overflow: hidden;
+    width: auto; /* Якщо потрібно обмежити ширину */
+    height: auto;
   }
   &__sectors {
     position: absolute;
@@ -131,6 +134,7 @@
   }
   .cover__decor {
     right: -165px;
+    bottom: 0;
   }
   .cover__image img {
     // width: 100%;
