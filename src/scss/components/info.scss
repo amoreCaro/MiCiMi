@@ -9,10 +9,10 @@
     justify-content: space-between;
   }
   &__text {
-    margin-bottom: 54px;
+    // margin-bottom: 54px;
     & p {
       width: 100%;
-      margin-top: 16px;
+      // margin-top: 16px;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
@@ -103,8 +103,15 @@
 // Modifications
 
 .info--career {
-  &info__content {
-    margin-right: 115px;
+  .info__content {
+    margin-top: -4px;
+  }
+  .info__text {
+    margin-bottom: 24px;
+    & h3 {
+      margin-top: 33px;
+
+    }
   }
 }
 

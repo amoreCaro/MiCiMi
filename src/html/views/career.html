@@ -32,7 +32,7 @@
     }) %>
     <%= _.template(require('./../includes/advantages.html').default)({}) %>
     <%= _.template(require('./../includes/info.html').default)({
-      additionalClass: "info--career, info--small",
+      additionalClass: "info--career info--small",
       contentClass: "",
       decorPosition: "",
       title: "Our Culture",
@@ -44,7 +44,9 @@
         class: "btn-primary",
       },
       image: "img/hero-info__image.png",
-      decor: "img/hero-info__decor.png"
+      decor:[
+        "img/hero-info__decor.png"
+      ]
     }) %>
     <%= _.template(require('./../includes/vacancies.html').default)({}) %>
     <%= _.template(require('./../includes/programs.html').default)({}) %>
