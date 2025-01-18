@@ -102,9 +102,14 @@
 
 // Modifications
 
+.info--career {
+  &info__content {
+    margin-right: 115px;
+  }
+}
+
 .info--management {
   margin-right: 56px;
-
 }
 .info__decor--management {
   margin-bottom: 0;
