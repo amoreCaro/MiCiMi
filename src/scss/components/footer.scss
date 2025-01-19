@@ -19,12 +19,13 @@
     padding: 40px 0px 50px 0px;
   }
   &__grid {
+    max-width: 1306px;
     margin: 40px 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     & h4 {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     & p {
       color: $text-color;
@@ -54,7 +55,7 @@
   }
   &__bottom {
     &__content {
-      margin-top: 58px;
+      margin-top: 40px;
       display: flex;
       justify-content: space-between;
     }
