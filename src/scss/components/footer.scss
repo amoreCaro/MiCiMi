@@ -19,11 +19,17 @@
     padding: 40px 0px 50px 0px;
   }
   &__grid {
+    position: relative;
+    // top: -6px;
     max-width: 1306px;
-    margin: 40px 0px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+    width: 100%;
+    min-height: 113px;
+    margin: 36px 0px;
+    display: flex;
+    justify-content: space-between;
+    &-col-1 {
+      margin-right: 285px;
+    }
     & h4 {
       margin-bottom: 8px;
     }
@@ -55,7 +61,7 @@
   }
   &__bottom {
     &__content {
-      margin-top: 40px;
+      margin-top: 44px;
       display: flex;
       justify-content: space-between;
     }
@@ -78,6 +84,7 @@
     }
   }
 }
+
 .footer__bottom::before {
   content: "";
   display: block;
