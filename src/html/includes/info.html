@@ -25,6 +25,7 @@
         
         <% if (typeof decor !== 'undefined' && decor.length > 0) { %>
           <div class="info__decor <%= decorPosition %>">
+
             <% _.each(decor, function(image, index) { %>
               <img class="<%= index === 1 ? 'decor-under-image' : 'decor-on-image' %>" src="<%= image %>" alt="" />
             <% }); %>

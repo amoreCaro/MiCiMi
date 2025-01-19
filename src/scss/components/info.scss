@@ -105,13 +105,11 @@
 .info--career {
   .info__content {
     margin-top: -90px;
-
   }
   .info__text {
     margin-bottom: 24px;
     & h3 {
       margin-top: 33px;
-
     }
   }
 }
@@ -124,6 +122,11 @@
   position: absolute;
   right: -40px;
   top: 89px;
+}
+
+.info__decor--career {
+  position: absolute;
+  right: -22px;
 }
 
 .info--large {
