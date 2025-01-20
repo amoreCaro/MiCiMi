@@ -18,10 +18,20 @@
       background-color: $white;
       padding: 32px;
       border-radius: 8px;
-      min-height: 216px;
-      height: 100%;
+      // min-height: 216px;
+      & h3 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      & p {
+        color: $text-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
       &-img {
         margin-bottom: 16px;
+        height: 60px;
       }
     }
   }
@@ -32,23 +42,19 @@
   & h3 {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 102px;
-  }
-  & p {
-    color: $text-color;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    margin-bottom: 100px;
   }
 }
 
 .advatages__grid-item-2 {
   grid-column: 1 / 4;
   grid-row: 2;
+  min-height: 216px;
 }
 
 .advantages__grid-item--empty-space {
   background-color: $gray-light;
+    min-height: 178px;
 }
 
 @media (max-width: 1024px) {
