@@ -13,13 +13,12 @@
   &__content {
     max-width: 50%;
     width: 100%;
-    padding: 0px 40px;
   }
 
   &__text {
     max-width: 541px;
     width: 100%;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     & h1 {
       padding-bottom: 8px;
       font-style: normal;
@@ -32,7 +31,7 @@
   }
 
   &__btn {
-    margin-top: 30px;
+    // margin-top: 30px;
   }
 
   &__image {
@@ -71,6 +70,14 @@
 
 // Modifications
 .banner--large {
+  .banner__content {
+    max-width: 541px;
+    width: 100%;
+    margin-left: 40px;
+  }
+  .banner__text {
+    margin-bottom: 24px;
+  }
   .banner__image {
     min-height: 757px;
   }
