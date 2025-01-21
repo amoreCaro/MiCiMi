@@ -79,6 +79,8 @@
     margin-bottom: 24px;
   }
   .banner__image {
+    max-width: 756px;
+    width: 100%;
     min-height: 757px;
   }
 }
@@ -91,7 +93,7 @@
 
 @media (max-width: 425px) {
   .banner--large .banner__image {
-    min-height: 355px;
+    min-height: 220px;
   }
   .banner--small .banner__image {
     min-height: 350px;
