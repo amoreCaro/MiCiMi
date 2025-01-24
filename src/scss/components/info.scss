@@ -46,6 +46,15 @@
   }
 }
 
+.info--home {
+  .info__decor {
+    position: absolute;
+    top: 0;
+    right: -32px;
+    z-index: 1;
+  }
+}
+
 @media (max-width: 1024px) {
   .info__decor {
     display: none;
