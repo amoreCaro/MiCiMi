@@ -127,9 +127,12 @@
 }
 
 .cover--career {
-  .cover__text p {
-    max-width: 595px;
-  }
+  .cover__text {
+    margin-bottom: 30px;
+    & p {
+      max-width: 595px;
+    }
+  } 
   .cover__decor {
     right: -165px;
     bottom: 0;

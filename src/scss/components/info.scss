@@ -142,7 +142,7 @@
   .decor-under-image {
     position: absolute;
     top: 54%;
-    left: -80%;
+    left: -79%;
   }
 }
 
@@ -164,7 +164,8 @@
     margin-bottom: 0px;
   }
   .info__content {
-    margin-left: -16px;
+    position: relative;
+    top: -22px;
     max-width: 611px;
     width: 100%;
   }

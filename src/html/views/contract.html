@@ -35,13 +35,15 @@
               image1: "img/two-image__img-1.png",
               image2: "img/two-image__img-2.png",
             },
-            decor: "img/two-image__decor.png"
+            decor:[
+              "img/contract-two-image__decor.png"
+            ] 
           }) %>
           
           
 
         <%= _.template(require('./../includes/strategy.html').default)({
-            additionalClass: "",
+            additionalClass: "strategy--without-heading",
             headingClass: "",
             title: "",
             subtitle: "",
