@@ -104,6 +104,9 @@
 .strategy--with-heading {
   .strategy__grid {
     padding: 0px 30px 30px 30px;
+    &-item h3 {
+      margin-bottom: 0px;
+    }
   }
   .strategy__text h2 {
     margin: 0px !important;
