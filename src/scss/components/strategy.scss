@@ -19,6 +19,7 @@
       background-color: $white;
       min-height: 285px;
       height: 100%;
+      
       & h3 {
         font-size: 32px;
         line-height: 39px;
@@ -32,6 +33,9 @@
         &:not(:last-child) {
           margin-bottom: 16px;
         }
+      }
+      & ul {
+        margin-top: -16px;
       }
     }
   }

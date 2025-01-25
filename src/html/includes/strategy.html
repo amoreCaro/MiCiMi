@@ -29,13 +29,13 @@
                     <% } %>
             
                     <% if (Array.isArray(item.paragraph)) { %>
-                        <p>
+                        <!-- <p> -->
                             <ul>
                                 <% item.paragraph.forEach(function(paragraphItem) { %>
                                     <li><%= paragraphItem %></li>
                                 <% }); %>
                             </ul>
-                        </p>
+                        <!-- </p> -->
                     <% } %>
                 </div>
             <% }); %>          
