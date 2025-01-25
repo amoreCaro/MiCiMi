@@ -46,15 +46,6 @@
   }
 }
 
-.info--home {
-  .info__decor {
-    position: absolute;
-    top: 0;
-    right: -32px;
-    z-index: 1;
-  }
-}
-
 @media (max-width: 1024px) {
   .info__decor {
     display: none;
@@ -108,6 +99,7 @@
 }
 
 // Modifications
+
 .info--home {
   .info__text {
     margin-bottom: 32px;
@@ -118,7 +110,14 @@
       margin-top: 0px;
     }
   }
+  .info__decor {
+    position: absolute;
+    top: 0;
+    right: -32px;
+    z-index: 1;
+  }
 }
+
 .info--career {
   .info__content {
     margin-top: -90px;
@@ -135,10 +134,18 @@
   margin-right: 56px;
 }
 .info__decor--management {
-  margin-bottom: 0;
-  position: absolute;
-  right: -40px;
-  top: 89px;
+  .decor-on-image {
+    position: relative;
+    top: 130px;
+    left: 0;
+    z-index: 1;
+  }
+  .decor-under-image{
+    position: absolute;
+    top: 54%;
+    left: -80%;
+}
+
 }
 
 .info__decor--career {

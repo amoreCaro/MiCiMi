@@ -1,7 +1,6 @@
 .strategy {
   &__container {
     background-color: $gray-light;
-    // padding: 0 30px 30px 30px;
     border-radius: 12px;
     & h2 {
       text-align: center;
@@ -12,7 +11,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    // padding: 30px;
 
     &-item {
       position: relative;
@@ -22,37 +20,19 @@
       min-height: 285px;
       height: 100%;
       & h3 {
-        line-height: 38px;
+        font-size: 32px;
+        line-height: 39px;
+        margin: 0px;
         margin-bottom: 24px;
       }
       & p {
         color: $text-color;
         font-size: 16px;
         line-height: 24px;
-        margin-bottom: 12px;
         &:not(:last-child) {
           margin-bottom: 16px;
         }
-        // & ul,
-        // ol {
-        //   margin: 0px;
-        //   & li {
-        //     gap: 12px;
-        //     color: $text-color;
-        //     font-weight: 400;
-        //     font-size: 16px;
-        //     line-height: 24px;
-        //     margin: 32px 0px;
-        //     &::marker {
-        //       color: $black;
-        //     }
-        //   }
-        // }
       }
-      // & ul {
-      //   color: $text-color;
-      //   margin-bottom: 0px;
-      // }
     }
   }
 }
