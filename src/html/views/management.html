@@ -20,7 +20,7 @@
         },
       }) %>
       <%= _.template(require('./../includes/strategy.html').default)({
-        additionalClass: "",
+        additionalClass: "strategy--without-heading",
         headingClass: "",
         title: "",
         subtitle: "",
@@ -44,7 +44,7 @@
     <%= _.template(require('./../includes/info.html').default)({
       additionalClass: "info--large",
       contentClass: "info--management",
-      decorPosition: "info__decor--management",  <!-- Параметр для декора -->
+      decorPosition: "info__decor--management", 
       title: "Risk Management",
       text: [
         "Our senior management have substantial experience of advising our clients on good risk management practice and can provide professional advice on approaches on setting strategy, the application of risk management and governance, strengthening resilience and in setting up holistic processes.",
@@ -73,7 +73,7 @@
         },
     }) %>
     <%= _.template(require('./../includes/strategy.html').default)({
-      additionalClass: "strategy--small",
+      additionalClass: "strategy--small, strategy--with-heading",
       headingClass: "",
       title: "Quality Management",
       subtitle: "",

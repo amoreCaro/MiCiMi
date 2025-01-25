@@ -1,17 +1,18 @@
 .strategy {
   &__container {
     background-color: $gray-light;
-    padding: 30px;
+    // padding: 0 30px 30px 30px;
     border-radius: 12px;
     & h2 {
       text-align: center;
-      margin: 60px 0px;
+      padding: 60px 0px;
     }
   }
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    // padding: 30px;
 
     &-item {
       position: relative;
@@ -117,5 +118,19 @@
     & h2 {
       margin-bottom: 40px;
     }
+  }
+}
+
+.strategy--with-heading {
+  .strategy__grid {
+    padding: 0px 30px 30px 30px;
+  }
+  .strategy__text h2 {
+    margin: 0px !important;
+  }
+}
+.strategy--without-heading {
+  .strategy__container {
+    padding: 30px;
   }
 }
