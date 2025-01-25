@@ -13,7 +13,6 @@
       font-size: 40px;
       line-height: 43px;
       font-style: bold;
-     
     }
     & p {
       width: 100%;
@@ -36,7 +35,7 @@
     position: absolute;
     right: 0;
     overflow: hidden;
-    width: auto; 
+    width: auto;
     height: auto;
   }
   &__sectors {
@@ -80,6 +79,9 @@
       margin-bottom: 8px;
     }
   }
+  .cover__decor {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -107,10 +109,6 @@
       height: auto;
       object-fit: cover;
     }
-  }
-
-  .cover__decor {
-    display: none;
   }
 }
 
@@ -142,7 +140,6 @@
 }
 
 .cover--services {
-
   .cover__container {
     background-color: $gray-light;
   }
@@ -170,10 +167,8 @@
   bottom: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .cover--services .cover__sectors {
     margin: 0px;
   }
 }
-
-
