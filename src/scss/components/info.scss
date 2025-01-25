@@ -120,7 +120,6 @@
 
 .info--career {
   .info__content {
-    // margin-top: -90px;
   }
   .info__text {
     margin-bottom: 30px;
@@ -198,5 +197,16 @@
 @media (max-width: 768px) {
   .info__content {
     max-width: 100% !important;
+  }
+  .info--large .info__content {
+    margin-left: 100px;
+    max-width: 611px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .info--large .info__content {
+    margin-left: 55px;
   }
 }
