@@ -1,0 +1,37 @@
+<section
+  class="wide-banner section <%= additionalClass %>"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+>
+  <div class="wide-banner__container container">
+    <h2><%= title %></h2>
+
+    <% if (typeof image !== 'undefined') { %>
+    <div class="wide-banner__image">
+      <img src="<%= image %>" alt="" />
+    </div>
+    <div class="wide-banner__text  <%= textClass %>">
+      <% 
+      // Ensure text is an array
+      if (Array.isArray(text)) {
+        text.forEach(function(paragraph) { 
+      %>
+        <p><%= paragraph %></p>
+      <% 
+        }); 
+      } else if (typeof text !== 'undefined') { 
+      %>
+        <p><%= text %></p> 
+      <% 
+      } 
+      %>
+    </div>
+
+    <% } %> 
+    <% if (typeof image !== 'undefined') { %>
+    <div class="wide-banner__decor">
+      <img src="<%= decor %>" alt="" />
+    </div>
+    <% } %>
+  </div>
+</section>

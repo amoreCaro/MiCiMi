@@ -1,6 +1,5 @@
 .h-content {
   & h1 {
-    font-weight: bold;
     font-size: 48px;
     line-height: 52px;
     color: $black;
@@ -11,7 +10,6 @@
   }
 
   & h2 {
-    font-weight: bold;
     font-size: 40px;
     line-height: 43px;
     color: $black;
@@ -22,7 +20,6 @@
   }
 
   & h3 {
-    font-weight: bold;
     font-size: 32px;
     line-height: 36px;
     color: $black;
@@ -35,6 +32,7 @@
     font-size: 24px;
     line-height: 42px;
     color: $black;
+
     & b {
       color: $accent-color;
       font-weight: 700;
@@ -45,16 +43,20 @@
       font-style: italic;
     }
   }
-
-  & a {
-    color: $accent-color;
-    text-decoration: underline;
-    font-size: 24px;
-    line-height: 42px;
-    &:hover {
-      text-decoration: none;
-    }
+  & ul {
+    color: $text-color;
+    margin-bottom: 0px;
   }
+
+  // & a {
+  //   color: $accent-color;
+  //   text-decoration: underline;
+  //   font-size: 24px;
+  //   line-height: 42px;
+  //   &:hover {
+  //     text-decoration: none;
+  //   }
+  // }
   & figure {
     margin-bottom: 16px;
     & picture {
@@ -67,18 +69,26 @@
       }
     }
   }
-  & ul, ol {
-    margin: 32px 0px;
+  & ul,
+  ol {
+    // margin: 32px 0px;
   }
   & li {
-    gap: 12px;
+    list-style: none;
+
     color: $text-color;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 24px;
-    margin: 32px 0px;
+    &:before {
+      content: "·";
+      font-size: 30px;
+      vertical-align: middle;
+      line-height: 24px;
+      margin-right: 24px;
+    }
     &::marker {
-      color: $accent-color;
+      color: $text-color;
     }
   }
 

@@ -14,10 +14,9 @@
     gap: 32px;
   }
   &__text {
-    max-width: 932px;
+    max-width: 842px;
     text-align: left;
     & p {
-      margin-bottom: 32px;
       font-size: 24px;
       line-height: 42px;
       color: $black;
@@ -25,17 +24,16 @@
   }
   &__btn {
     width: 100%;
-    height: 100%;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .quote__text p {
     font-size: 22px;
     line-height: 36px;
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .quote {
     padding-bottom: 120px;
   }
@@ -44,7 +42,7 @@
     line-height: 32px;
   }
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .quote {
     padding-bottom: 100px;
   }
@@ -53,12 +51,16 @@
     line-height: 32px;
   }
 }
-@media screen and (max-width: 425px) {
+
+// Modifications
+.quote--with-btn {
   .quote {
-    padding-bottom: 75px;
-  }
-  .quote__text p {
-    font-size: 16px;
-    line-height: 32px;
+    height: 100%;
+    &__text {
+      max-width: 932px;
+      & p {
+        margin-bottom: 32px;
+      }
+    }
   }
 }

@@ -1,10 +1,5 @@
 .cta {
   &__container {
-    background-image: url(../img/cta__decor.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 36%;
-    width: 100%;
     min-height: 811px;
     position: relative;
     width: 100%;
@@ -12,12 +7,11 @@
     border-radius: 12px;
     display: flex;
     align-items: center;
-
   }
 
   &__content {
     margin-left: 93px;
-    width: 60%;
+    width: 42%;
   }
   &__text {
     & h1 {
@@ -34,6 +28,7 @@
     justify-content: left;
   }
   &__image {
+    z-index: 1;
     & img {
       object-fit: cover;
       top: 0;
@@ -41,20 +36,27 @@
       height: auto;
     }
   }
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (max-width: 768px) {
+  .cta__content {
+    margin-left: 0px;
+    width: 100%;
+  }
   .cta__text {
+    margin: 32px 0px;
     & h1 {
       font-size: 30px;
       line-height: 36px;
     }
   }
-}
-
-@media (max-width: 720px) {
-  .cta__content {
-    margin-left: 0px;
+  .cta__decor {
+    display: none;
   }
   .cta__container {
     min-height: 420px;
@@ -62,44 +64,26 @@
     padding: 8px;
     display: flex;
     flex-direction: column-reverse;
-    align-items: left;
-    justify-content: center;
     align-items: center;
-  }
-  .cta__image {
-    display: flex;
     justify-content: center;
-
-    & img {
-      height: auto;
-      width: 80%;
-      object-fit: contain;
-      left: 20%;
-    }
-  }
-  .cta__text {
-    margin-bottom: -20px;
-  }
-}
-
-@media (max-width: 425px) {
-  .cta__container {
+    align-items: self-start;
     padding-bottom: 24px;
   }
-  .cta__text {
-    margin: 50px 0px;
-
-    & h1 {
-      font-size: 26px;
-    }
-  }
 }
-@media (max-width: 320px) {
+
+@media (max-width: 720px) {
+  .cta__content {
+    margin-left: 0px;
+    width: 100%;
+  }
+
   .cta__text {
     margin-bottom: -20px;
+  }
+}
 
-    & h1 {
-      font-size: 26px;
-    }
+@media (max-width: 375px) {
+  .cta__text h1 {
+    font-size: 26px;
   }
 }

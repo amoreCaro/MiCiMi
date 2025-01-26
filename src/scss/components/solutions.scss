@@ -54,6 +54,8 @@
       }
 
       & h3 {
+        font-weight: 500px;
+        font-size: 32px;
         line-height: 38px;
         margin-bottom: 12px;
       }
@@ -61,7 +63,6 @@
         color: $text-color;
         font-size: 16px;
         line-height: 24px;
-        margin-bottom: 12px;
       }
 
       &-1 {
@@ -73,13 +74,14 @@
       padding-left: 40px;
     }
     &-text {
+      max-width: 372px;
       width: 100%;
-      padding: 36px 30px 0px 30px;
+      margin: 40px 40px 0px;
     }
     &-btn {
       position: absolute;
       bottom: 60px;
-      margin: 0 32px;
+      margin: 0 40px;
     }
   }
 }
@@ -95,6 +97,15 @@
 
   .solutions__grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .solutions__grid-text {
+    max-width: 300px;
+    width: 100%;
+    padding: 24px;
+    margin: 0px;
   }
 }
 

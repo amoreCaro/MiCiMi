@@ -9,7 +9,6 @@
     & a {
       display: block;
       width: 100%;
-      height: 100%;
       padding: 0;
     }
     & svg {
@@ -20,12 +19,18 @@
     padding: 40px 0px 50px 0px;
   }
   &__grid {
-    margin: 40px 0px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+    position: relative;
+    max-width: 1306px;
+    width: 100%;
+    min-height: 113px;
+    margin: 36px 0px;
+    display: flex;
+    justify-content: space-between;
+    &-col-1 {
+      margin-right: 285px;
+    }
     & h4 {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     & p {
       color: $text-color;
@@ -55,7 +60,7 @@
   }
   &__bottom {
     &__content {
-      margin-top: 58px;
+      margin-top: 44px;
       display: flex;
       justify-content: space-between;
     }
@@ -78,6 +83,7 @@
     }
   }
 }
+
 .footer__bottom::before {
   content: "";
   display: block;
@@ -87,26 +93,70 @@
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .footer__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 0px;
+    position: relative;
+    max-width: 1306px;
+    width: 100%;
+    min-height: 113px;
+    margin: 36px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    &-col-1 {
+      margin-right: 0px;
+    }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1024px) {
   .footer__grid {
+    position: relative;
+    max-width: 1306px;
+    width: 100%;
+    min-height: 113px;
+    margin: 36px 0;
+    display: flex;
+    flex-direction: column; /* Додаємо цей стиль для переносу блоків вниз */
+    gap: 20px; /* Зменшуємо відстань між елементами */
+  }
+
+  .footer__grid-col-1 {
+    margin-right: 0;
+  }
+}
+
+// @media (max-width: 768px) {
+//   .footer__grid {
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 40px;
+//   }
+//   .footer__bottom__content {
+//     gap: 16px;
+//     display: flex;
+//     flex-direction: column;
+//     text-align: left;
+//   }
+// }
+@media (max-width: 768px) {
+  .footer__grid {
+    display: grid;
+    text-align: left;
+    place-items: left;
+    position: relative;
+    justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
+  .footer__links {
+    display: block;
+  }
   .footer__bottom__content {
-    gap: 16px;
     display: flex;
-    flex-direction: column;
-    text-align: left;
+    flex-direction: column
   }
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .footer__grid {
     text-align: left;
     place-items: left;

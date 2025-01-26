@@ -149,7 +149,7 @@
   display: block;
 }
 
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .sidebar {
     max-width: 425px;
     width: 100%;
