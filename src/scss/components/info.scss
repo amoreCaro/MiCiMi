@@ -16,6 +16,19 @@
       line-height: 24px;
       color: $text-color;
     }
+
+    ul.colored-bullet li {
+      display: flex; 
+      align-items: center;
+      &::before {
+        list-style-type: disc;
+        color: $accent-color; 
+        font-size: 90px; 
+        margin-right: 12px;
+        margin-left: 4px; 
+        list-style-position: inside;
+      }
+    }
   }
 
   &__image {
@@ -119,14 +132,16 @@
 }
 
 .info--career {
-  .info__content {
-  }
   .info__text {
     margin-bottom: 30px;
     & h3 {
       margin-top: 33px;
     }
   }
+}
+.info__decor--career {
+  position: absolute;
+  right: -22px;
 }
 
 .info--management {
@@ -146,9 +161,23 @@
   }
 }
 
-.info__decor--career {
-  position: absolute;
-  right: -22px;
+.info--consulting {
+  .info__text {
+    position: relative;
+    bottom: 2px;
+    & h3 {
+      font-size: 40px;
+      line-height: 43px;
+      margin: 0px;
+      margin-bottom: 24px;
+    }
+    & p:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    & li {
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .info--large {
@@ -179,6 +208,18 @@
       position: absolute;
       left: 0px;
     }
+  }
+}
+
+.info--consulting {
+  .decor-on-image {
+    position: absolute;
+    left: 25%;
+    top: 100%;
+  }
+  .decor-under-image {
+    position: relative;
+    left: -194%;
   }
 }
 

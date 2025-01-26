@@ -42,11 +42,20 @@
 
         <%= _.template(require('./../includes/info.html').default)({
           additionalClass: "info--medium",
-          contentClass: "",
-          decorPosition: "",
+          contentClass: "info--consulting",
+          decorPosition: "info--consulting",
           title: "Project Governance / PMO",
           text: [
             "Project governance is a framework that guides how an organisation makes key project decisions, ensuring direction, informed decision-making, and oversight. MiCiM applies the three pillars of good governance—information, people, and structure—to its project governance framework, ensuring high-quality project management. This framework encompasses change management, risk management, reporting, meetings, stakeholder engagement, and communication, with key principles including:",
+            {
+              paragraph: [
+              "Ensuring a single point of accountability for project success.", 
+              "Separating project ownership from other key stakeholder groups.",
+              "Distinguishing stakeholder management from project decision-making.",
+              "Separating project governance from organisational governance.",
+              ],
+              coloredBullet: true
+            },
             "The framework defines the responsibilities of both the project team and MiCiM's senior management, who are not involved in daily delivery but ensure alignment with the client’s governance framework, involving their senior management and key stakeholders.",
             "This approach is supported by MiCiM's internal PMO, which manages internal systems, maintains the framework, and utilises Procore, our EDMS. Our senior management also advises clients on good governance practices, assists in setting up internal systems, and participates in or establishes project boards, including for multi-owned projects."
           ],
@@ -56,7 +65,8 @@
           },
           image: "img/consulting-info__image.png",
           decor: [
-           
+          "img/consulting-info__decor-1.png",
+          "img/consulting-info__decor-2.png"
           ],
         }) %>
 
@@ -143,7 +153,7 @@
       }) %>
       
         <%= _.template(require('./../includes/strategy.html').default)({
-          additionalClass: "strategy--large-heading",
+          additionalClass: "strategy--large-heading, strategy--without-heading",
           headingClass: "",
           title: "",
           subtitle: "",
