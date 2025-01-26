@@ -21,6 +21,29 @@
         },
       }) %>
 
+      <%= _.template(require('./../includes/info.html').default)({
+        additionalClass: "info--career info--small",
+        contentClass: "",
+  
+        title: "",
+        text: [
+          "MiCiM offer a range of construction delivery models tailored to client and project requirements, we fully understand this cannot be a “one size fits all model”.",
+          "A key service offering available is the PMC (Project Management Consulting) approach (also known as multi prime contracting).",
+          "The PMC approach involves the client engaging with MiCiM’s delivery team to create a management service which is dedicated to a project as an extension of the client.",
+          "The project team can then devise a project specific packaging strategy to engage with right specialist trade contractors and vendors at the time of the project. The client contracts directly with the specialist trade contractors, avoiding the mark-up commonly applied with a GC approach. ",
+          "This overall approach gives the Client the ability to control and drive efficiency in the areas most important to the client and project requirements such as programme, commercials, quality."
+        ],
+        btn: {
+          text: "",
+          class: "",
+        },
+        image: "img/project-management-contracting-info__image.png",
+        decorPosition: "info__decor--career",
+        decor:[
+          "img/project-management-contracting-info__decor.png"
+        ]
+      }) %>
+
       <%= _.template(require('./../includes/strategy.html').default)({
         additionalClass: "strategy--large-items, strategy--with-heading",
         headingClass: "text--column",

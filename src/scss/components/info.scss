@@ -15,6 +15,9 @@
       font-size: 16px;
       line-height: 24px;
       color: $text-color;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
 
     ul.colored-bullet li {
