@@ -27,8 +27,13 @@
     display: flex;
     justify-content: space-between;
     &-col-1 {
-      margin-right: 285px;
+      margin-right: 248px;
     }
+    &-col:nth-child(2) {
+      margin-right: 28px;
+
+    }
+    
     & h4 {
       margin-bottom: 8px;
     }
@@ -153,7 +158,7 @@
   }
   .footer__bottom__content {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
   }
 }
 @media (max-width: 425px) {
