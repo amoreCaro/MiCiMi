@@ -20,6 +20,7 @@
         },
       }) %>
       <%= _.template(require('./../includes/solutions.html').default)({}) %>
+
       <%= _.template(require('./../includes/info.html').default)({
         additionalClass: "info--small info--home",
         contentClass: "",
@@ -35,6 +36,7 @@
           "img/info__decor.png"
         ],
       }) %>
+      
       <%= _.template(require('./../includes/partners.html').default)({
         title: "In Good Company",
         text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",

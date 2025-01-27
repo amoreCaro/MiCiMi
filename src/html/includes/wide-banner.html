@@ -10,16 +10,18 @@
     <div class="wide-banner__image">
       <img src="<%= image %>" alt="" />
     </div>
-    <div class="wide-banner__text  <%= textClass %>">
+    <% } %>
+
+    <div class="wide-banner__text <%= textClass %>">
       <% 
-      // Ensure text is an array
-      if (Array.isArray(text)) {
+      // Перевірка на тип text: якщо це масив, відображаємо кожен абзац, якщо рядок — один абзац
+      if (Array.isArray(text)) { 
         text.forEach(function(paragraph) { 
       %>
         <p><%= paragraph %></p>
       <% 
         }); 
-      } else if (typeof text !== 'undefined') { 
+      } else if (text) { 
       %>
         <p><%= text %></p> 
       <% 
@@ -27,8 +29,7 @@
       %>
     </div>
 
-    <% } %> 
-    <% if (typeof image !== 'undefined') { %>
+    <% if (typeof decor !== 'undefined') { %>
     <div class="wide-banner__decor">
       <img src="<%= decor %>" alt="" />
     </div>

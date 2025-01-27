@@ -21,14 +21,14 @@
     }
 
     ul.colored-bullet li {
-      display: flex; 
+      display: flex;
       align-items: center;
       &::before {
         list-style-type: disc;
-        color: $accent-color; 
-        font-size: 90px; 
+        color: $accent-color;
+        font-size: 90px;
         margin-right: 12px;
-        margin-left: 4px; 
+        margin-left: 4px;
         list-style-position: inside;
       }
     }
@@ -213,7 +213,7 @@
   }
 }
 
-.info--project-management-contracting {    
+.info--project-management-contracting {
   position: absolute;
   top: -100%;
   transform: translateY(50%);
@@ -229,6 +229,19 @@
   .decor-under-image {
     position: relative;
     left: -194%;
+  }
+}
+
+.info--training {
+  .decor-on-image {
+    position: relative;
+    top: 192px;
+    z-index: 1;
+  }
+  .decor-under-image {
+    position: absolute;
+    left: -121%;
+    top: revert-layer;
   }
 }
 

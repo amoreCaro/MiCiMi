@@ -93,6 +93,12 @@
   }
 }
 
+.banner__heading-light {
+  .banner__text h1 {
+    font-weight: 400;
+  }
+}
+
 @media (max-width: 425px) {
   .banner--large .banner__image {
     min-height: 220px;

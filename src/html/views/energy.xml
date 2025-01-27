@@ -10,7 +10,7 @@
           text: "",
           class: "",
         },
-        additionalClass: "banner--small" 
+        additionalClass: "banner--small banner__heading-light" 
       }) %>
       <%= _.template(require('./../includes/quote.html').default)({
         additionalClass: "",
