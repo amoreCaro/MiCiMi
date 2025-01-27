@@ -15,6 +15,9 @@
       font-size: 16px;
       line-height: 24px;
       color: $text-color;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
 
     ul.colored-bullet li {
@@ -110,6 +113,36 @@
     max-width: 611px;
   }
 }
+.info--large {
+  & h3 {
+    font-size: 40px;
+    line-height: 43px;
+    margin-bottom: 24px;
+  }
+  .info__image {
+    min-height: 590px;
+  }
+  .info__text {
+    margin-bottom: 0px;
+  }
+  .info__content {
+    position: relative;
+    top: -22px;
+    max-width: 611px;
+    width: 100%;
+  }
+  .info__container {
+    position: relative;
+    z-index: 0;
+  }
+  .info__decor {
+    &:first-child {
+      position: relative;
+      position: absolute;
+      left: 0px;
+    }
+  }
+}
 
 // Modifications
 
@@ -180,35 +213,11 @@
   }
 }
 
-.info--large {
-  & h3 {
-    font-size: 40px;
-    line-height: 43px;
-    margin-bottom: 24px;
-  }
-  .info__image {
-    min-height: 590px;
-  }
-  .info__text {
-    margin-bottom: 0px;
-  }
-  .info__content {
-    position: relative;
-    top: -22px;
-    max-width: 611px;
-    width: 100%;
-  }
-  .info__container {
-    position: relative;
-    z-index: 0;
-  }
-  .info__decor {
-    &:first-child {
-      position: relative;
-      position: absolute;
-      left: 0px;
-    }
-  }
+.info--project-management-contracting {    
+  position: absolute;
+  top: -100%;
+  transform: translateY(50%);
+  z-index: 1;
 }
 
 .info--consulting {

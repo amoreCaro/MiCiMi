@@ -83,3 +83,47 @@
     }
   }
 }
+.two-image--construction-management {
+  .two-image__left {
+    margin-top: -24px;
+  }
+  .two-image__decor {
+    margin-left: -67px;
+  }
+}
+
+.two-image--general-contracting {
+  .two-image {
+    overflow: hidden;
+  }
+  .two-image__container {
+    overflow: visible;
+  }
+  .two-image__decor {
+    position: absolute;
+    bottom: -172px;
+    left: -30px;
+  }
+  .two-image__left {
+    margin-top: -26px;
+  }
+}
+
+
+
+.two-image--enegry {
+  .two-image {
+    overflow: hidden;
+  }
+  .two-image__container {
+    overflow: visible;
+  }
+  .two-image__decor {
+    position: absolute;
+    left: -26px;
+    top: -122px;
+  }
+}
+
+
+

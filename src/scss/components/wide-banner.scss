@@ -47,3 +47,15 @@
   }
 }
 
+
+
+.wide-banner--energy {
+  .wide-banner__text p {
+    max-width: 660px;
+  }
+  .wide-banner__decor {
+    position: absolute;
+    left: 86.3%;
+    top: -108px;
+  }
+}
