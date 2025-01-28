@@ -57,27 +57,51 @@
       ]
     }) %>
 
+    <%= _.template(require('./../includes/info.html').default)({
+          additionalClass: "info--medium",
+          contentClass: "info--consulting",
+          decorPosition: "info--design",
+          title: "Basis of Design",
+          text: [
+            "The basis of design (BoD) document outlines how the owner’s project requirements translate into a build that meets the client’s expectations. Engaging with us ensures:",
+            {
+              paragraph: [
+                "Assistance in delivering a high-performance facility.", 
+                "Important practical and technical elements are considered.", 
+                "Key decisions, assumptions and specifications are clearly presented to all stakeholders.", 
+                "A record of the key discussions and assumptions behind design decisions made to meet the Owner’s Project Requirements.", 
+                "Client requirements are discussed, and design options explored, with a particular focus on cooling systems design." 
+              ],
+              coloredBullet: true
+            },
+          ],
+          btn: {
+            text: "",
+            class: "",
+          },
+          image: "img/design-info__image--v1.png",
+          decor: [
+            "img/design-info__decor--v1.png"
+          ],
+        }) %>
 
-    <%= _.template(require('./../includes/two-image.html').default)({
-        additionalClass: "two-image--enegry", 
-        leftTitle: "Basis of Design", 
-        item: {
-          textLeft: [
-              "The basis of design (BoD) document outlines how the owner’s project requirements translate into a build that meets the client’s expectations. Engaging with us ensures:",
-              "Screening studies are designed to give an approximation of the impact to the correct order of magnitude. For emissions from fuel combustion (such as generator diesel), refrigerant leaks, and electricity consumption we apply BEIS conversion factors to the design energy consumption."
-         ],
-          rightTitle: "In Use Audits / Post Completion Audits",
-          textRight: [
-            "The ongoing financial obligations associated with operating facilities is a major investment.  With a drive towards a sustainable digital transformation reducing energy usage, cutting carbon, reducing water consumption and waste are top priorities for our customers. Our technical audit specialists can support operational teams to ensure opportunities are not missed during design development and operation of facilities. In Use Learning is transferred back into other projects to ensure there is a constant learning loop to drive improvements.  In Use Audits help to improve organisational effectiveness as well as being informative for assessing the needs for any future capital investment programme to ensure overall investments are maximised.",    
-          ],      
-          image1: "img/training-two-image__image-1.png",
-          image2: "img/training-two-image__image-2.png",
-        },
-        decor:[
-          "img/"
-        ] 
-      }) %>
-
+            <%= _.template(require('./../includes/info.html').default)({
+          additionalClass: "info--medium info--reverse",
+          contentClass: "info--consulting",
+          decorPosition: "info--design-reverse",
+          title: "In Use Audits / Post Completion Audits",
+          text: [
+           "The ongoing financial obligations associated with operating facilities is a major investment.  With a drive towards a sustainable digital transformation reducing energy usage, cutting carbon, reducing water consumption and waste are top priorities for our customers. Our technical audit specialists can support operational teams to ensure opportunities are not missed during design development and operation of facilities. In Use Learning is transferred back into other projects to ensure there is a constant learning loop to drive improvements.  In Use Audits help to improve organisational effectiveness as well as being informative for assessing the needs for any future capital investment programme to ensure overall investments are maximised."
+          ],
+          btn: {
+            text: "",
+            class: "",
+          },
+          image: "img/design-info__image--v2.png",
+          decor: [
+            "img/design-info__decor--v2.png"
+          ],
+        }) %>
 
       <%= _.template(require('./../includes/strategy.html').default)({
         additionalClass: "strategy--without-heading",
