@@ -123,7 +123,7 @@
     }) %>
 
         <%= _.template(require('./../includes/two-image.html').default)({
-        additionalClass: "Basis of Design", 
+        additionalClass: "two-image--training", 
         leftTitle: "Commissioning", 
         item: {
           textLeft: [
@@ -135,11 +135,11 @@
             "Operational Intelligence (OI): Ensuring Successful Validation",
             "Operational Intelligence ensures thorough validation, from Factory Acceptance Testing (Level 1) to Integrated Systems Testing (Level 5). OI collaborates with stakeholders to develop test scripts, manage on-site tests, and facilitate a smooth handover, ensuring the installation meets design intent."
           ],      
-          image1: "img/",
-          image2: "img/",
+          image1: "img/design-two-image__image-1--v2.png",
+          image2: "img/design-two-image__image-2--v2.png",
         },
         decor:[
-          "img/"
+          "img/training-two-image__decor--v2.png"
         ] 
       }) %>
 

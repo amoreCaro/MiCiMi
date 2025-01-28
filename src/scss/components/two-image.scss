@@ -122,3 +122,17 @@
     top: -122px;
   }
 }
+
+.two-image--training {
+  .two-image__right {
+    position: relative;
+    top: 62px;
+  }
+  .two-image__container {
+    overflow: visible;
+  }
+  .two-image__decor {
+    position: absolute;
+    left: -30px;
+  }
+}
