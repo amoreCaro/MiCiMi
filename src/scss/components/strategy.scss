@@ -19,7 +19,7 @@
       background-color: $white;
       // min-height: 285px;
       height: 100%;
-      
+
       & h3 {
         font-size: 32px;
         line-height: 39px;
@@ -94,13 +94,24 @@
       margin-bottom: 16px;
     }
   }
-
 }
 .strategy__subtitle {
   & p {
     margin-bottom: 12px;
     & span {
       color: $accent-color;
+    }
+  }
+  & ul.colored-bullet li {
+    display: flex;
+    align-items: center;
+    &::before {
+      list-style-type: disc;
+      color: $accent-color;
+      font-size: 90px;
+      margin-right: 12px;
+      margin-left: 4px;
+      list-style-position: inside;
     }
   }
 }

@@ -8,13 +8,49 @@
             <div class="strategy__subtitle">
                 <% if (Array.isArray(subtitle)) { %>
                     <% subtitle.forEach(function(subtitleItem) { %>
-                        <p><%= subtitleItem %></p>
+                        <% if (Array.isArray(subtitleItem.paragraph)) { %>
+                            <% if (subtitleItem.coloredBullet) { %>
+                                <!-- Handle colored bullet list -->
+                                <ul class="colored-bullet">
+                                    <% subtitleItem.paragraph.forEach(function(item) { %>
+                                        <li><%= item %></li>
+                                    <% }); %>
+                                </ul>
+                            <% } else { %>
+                                <!-- Handle regular bullet list -->
+                                <ul>
+                                    <% subtitleItem.paragraph.forEach(function(item) { %>
+                                        <li><%= item %></li>
+                                    <% }); %>
+                                </ul>
+                            <% } %>
+                        <% } else { %>
+                            <p><%= subtitleItem %></p>
+                        <% } %>
                     <% }); %>
                 <% } else if (subtitle) { %>
-                    <p><%= subtitle %></p>
+                    <% if (Array.isArray(subtitle.paragraph)) { %>
+                        <% if (subtitle.coloredBullet) { %>
+                            <!-- Handle colored bullet list -->
+                            <ul class="colored-bullet">
+                                <% subtitle.paragraph.forEach(function(item) { %>
+                                    <li><%= item %></li>
+                                <% }); %>
+                            </ul>
+                        <% } else { %>
+                            <!-- Handle regular bullet list -->
+                            <ul>
+                                <% subtitle.paragraph.forEach(function(item) { %>
+                                    <li><%= item %></li>
+                                <% }); %>
+                            </ul>
+                        <% } %>
+                    <% } else { %>
+                        <p><%= subtitle %></p>
+                    <% } %>
                 <% } %>
-            </div>            
-        </div>
+            </div>
+            
         <div class="strategy__grid">
             <% strategy.forEach(function(item, index) { %>
                 <div class="strategy__grid-item">
