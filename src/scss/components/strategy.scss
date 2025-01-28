@@ -19,6 +19,22 @@
       background-color: $white;
       // min-height: 285px;
       height: 100%;
+      & li {
+        margin-bottom: 16px;
+      }
+      & ul.colored-bullet li {
+        display: flex;
+        align-items: center;
+        &::before {
+          list-style-type: disc;
+          color: $accent-color;
+          font-size: 90px;
+          margin-right: 12px;
+          margin-left: 4px;
+          list-style-position: inside;
+        }
+      
+      }
 
       & h3 {
         font-size: 32px;
@@ -35,7 +51,7 @@
         }
       }
       & ul {
-        margin-top: -16px;
+        // margin-top: -16px;
       }
     }
   }
@@ -52,6 +68,9 @@
   padding: 60px 0px;
   display: flex;
   justify-content: space-between;
+  & li {
+    margin-bottom: 16px;
+  }
   & h2 {
     text-align: left;
     padding: 0px;
@@ -64,6 +83,12 @@
     margin-bottom: 12px;
     max-width: 654px;
     width: 100%;
+  }
+}
+
+.strategy__grid-item-without-heading {
+  .strategy__grid-item h3  {
+    margin: 0px
   }
 }
 

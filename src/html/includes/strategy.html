@@ -4,77 +4,96 @@
             <% if (title != "") { %>
                 <h2><%= title %></h2>
             <% } %>
-            
             <div class="strategy__subtitle">
                 <% if (Array.isArray(subtitle)) { %>
                     <% subtitle.forEach(function(subtitleItem) { %>
-                        <% if (Array.isArray(subtitleItem.paragraph)) { %>
-                            <% if (subtitleItem.coloredBullet) { %>
-                                <!-- Handle colored bullet list -->
-                                <ul class="colored-bullet">
-                                    <% subtitleItem.paragraph.forEach(function(item) { %>
-                                        <li><%= item %></li>
-                                    <% }); %>
-                                </ul>
-                            <% } else { %>
-                                <!-- Handle regular bullet list -->
-                                <ul>
-                                    <% subtitleItem.paragraph.forEach(function(item) { %>
-                                        <li><%= item %></li>
-                                    <% }); %>
-                                </ul>
-                            <% } %>
+                        <% if (typeof subtitleItem === 'object' && subtitleItem.coloredBullet) { %>
+                            <!-- Handle colored bullet list -->
+                            <ul class="colored-bullet">
+                                <% subtitleItem.paragraph.forEach(function(item) { %>
+                                    <li><%= item %></li>
+                                <% }); %>
+                            </ul>
                         <% } else { %>
+                            <!-- Handle regular subtitle (non-colored bullet) -->
                             <p><%= subtitleItem %></p>
                         <% } %>
                     <% }); %>
                 <% } else if (subtitle) { %>
-                    <% if (Array.isArray(subtitle.paragraph)) { %>
-                        <% if (subtitle.coloredBullet) { %>
-                            <!-- Handle colored bullet list -->
-                            <ul class="colored-bullet">
-                                <% subtitle.paragraph.forEach(function(item) { %>
-                                    <li><%= item %></li>
-                                <% }); %>
-                            </ul>
-                        <% } else { %>
-                            <!-- Handle regular bullet list -->
-                            <ul>
-                                <% subtitle.paragraph.forEach(function(item) { %>
-                                    <li><%= item %></li>
-                                <% }); %>
-                            </ul>
-                        <% } %>
+                    <% if (typeof subtitle === 'object' && subtitle.coloredBullet) { %>
+                        <!-- Handle colored bullet list for single object -->
+                        <ul class="colored-bullet">
+                            <% subtitle.paragraph.forEach(function(item) { %>
+                                <li><%= item %></li>
+                            <% }); %>
+                        </ul>
                     <% } else { %>
+                        <!-- Handle regular subtitle (non-colored bullet) -->
                         <p><%= subtitle %></p>
                     <% } %>
                 <% } %>
             </div>
-            
+        </div>
+
         <div class="strategy__grid">
             <% strategy.forEach(function(item, index) { %>
                 <div class="strategy__grid-item">
                     <h3><%= item.title %></h3>
-                    
+        
+                    <!-- Handle item.text (Array or Single String) -->
                     <% if (Array.isArray(item.text)) { %>
                         <% item.text.forEach(function(paragraph) { %>
-                            <p><%= paragraph %></p>
+                            <% if (Array.isArray(paragraph.paragraph)) { %>  <!-- Handle paragraph as array -->
+                                <% if (paragraph.coloredBullet) { %>
+                                    <!-- Handle colored bullet list -->
+                                    <ul class="colored-bullet">
+                                        <% paragraph.paragraph.forEach(function(item) { %>
+                                            <li><%= item %></li>
+                                        <% }); %>
+                                    </ul>
+                                <% } else { %>
+                                    <!-- Handle regular bullet list -->
+                                    <ul>
+                                        <% paragraph.paragraph.forEach(function(item) { %>
+                                            <li><%= item %></li>
+                                        <% }); %>
+                                    </ul>
+                                <% } %>
+                            <% } else { %>
+                                <!-- Handle paragraph as string -->
+                                <p><%= paragraph %></p>
+                            <% } %>
                         <% }); %>
                     <% } else if (item.text) { %>
                         <p><%= item.text %></p>
                     <% } %>
-            
-                    <% if (Array.isArray(item.paragraph)) { %>
-                        <!-- <p> -->
-                            <ul>
-                                <% item.paragraph.forEach(function(paragraphItem) { %>
+        
+                    <!-- Handle item.subtitle (with colored bullet or regular text) -->
+                    <% if (item.subtitle) { %>
+                        <% if (typeof item.subtitle === 'object' && item.subtitle.coloredBullet) { %>
+                            <!-- Handle colored bullet list for subtitle -->
+                            <ul class="colored-bullet">
+                                <% item.subtitle.paragraph.forEach(function(paragraphItem) { %>
                                     <li><%= paragraphItem %></li>
                                 <% }); %>
                             </ul>
-                        <!-- </p> -->
+                        <% } else { %>
+                            <!-- Handle regular subtitle -->
+                            <p><%= item.subtitle %></p>
+                        <% } %>
+                    <% } %>
+        
+                    <!-- Handle item.paragraph (Regular bullet list or array of items) -->
+                    <% if (Array.isArray(item.paragraph)) { %>
+                        <ul>
+                            <% item.paragraph.forEach(function(paragraphItem) { %>
+                                <li><%= paragraphItem %></li>
+                            <% }); %>
+                        </ul>
                     <% } %>
                 </div>
-            <% }); %>          
+            <% }); %>
         </div>
+        
     </div>
 </section>
