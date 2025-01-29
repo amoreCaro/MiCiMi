@@ -10,9 +10,13 @@
     <div class="template__list">
         <% _.each(items, function(item) { %>
           <div class="template__item">
-              <img src="<%= item.image %>" alt="<%= item.title %>">
-              <h3><%= item.title %></h3>
-              <p><%= item.subtitle %></p>
+            <div class="template__item-image">
+                <img src="<%= item.image %>" alt="<%= item.title %>">
+            </div>
+              <div class="template__item-text">
+                  <h3><%= item.title %></h3>
+                  <p><%= item.subtitle %></p>
+              </div>
           </div>
         <% }); %>
       </div>      
