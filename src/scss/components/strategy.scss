@@ -32,14 +32,15 @@
           margin-left: 4px;
           list-style-position: inside;
         }
-      
       }
 
       & h3 {
         font-size: 32px;
         line-height: 39px;
         margin: 0px;
-        margin-bottom: 24px;
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
       }
       & p {
         color: $text-color;
@@ -49,7 +50,6 @@
           margin-bottom: 16px;
         }
       }
-
     }
   }
 }
@@ -84,8 +84,8 @@
 }
 
 .strategy__grid-item-without-heading {
-  .strategy__grid-item h3  {
-    margin: 0px
+  .strategy__grid-item h3 {
+    margin: 0px;
   }
 }
 

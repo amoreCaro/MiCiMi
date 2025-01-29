@@ -38,53 +38,43 @@
         <div class="strategy__grid">
             <% strategy.forEach(function(item, index) { %>
                 <div class="strategy__grid-item">
-                    <h3><%= item.title %></h3>
+                    <% if (Array.isArray(item.title)) { %> 
+                        <% item.title.forEach(function(line, index) { %>
+                            <h3>
+                                <%= line %>
+                            </h3>
+                            <% if (index < item.title.length - 1) { %> 
+                               
+                            <% } %>
+                        <% }); %>
+                    <% } else if (item.title) { %> 
+                        <h3><%= item.title %></h3>
+                    <% } %>
+                    
         
-                    <!-- Handle item.text (Array or Single String) -->
                     <% if (Array.isArray(item.text)) { %>
                         <% item.text.forEach(function(paragraph) { %>
-                            <% if (Array.isArray(paragraph.paragraph)) { %>  <!-- Handle paragraph as array -->
-                                <% if (paragraph.coloredBullet) { %>
-                                    <!-- Handle colored bullet list -->
-                                    <ul class="colored-bullet">
-                                        <% paragraph.paragraph.forEach(function(item) { %>
-                                            <li><%= item %></li>
-                                        <% }); %>
-                                    </ul>
-                                <% } else { %>
-                                    <!-- Handle regular bullet list -->
-                                    <ul>
-                                        <% paragraph.paragraph.forEach(function(item) { %>
-                                            <li><%= item %></li>
-                                        <% }); %>
-                                    </ul>
-                                <% } %>
-                            <% } else { %>
-                                <!-- Handle paragraph as string -->
-                                <p><%= paragraph %></p>
-                            <% } %>
+                            <p><%= paragraph %></p>
                         <% }); %>
                     <% } else if (item.text) { %>
                         <p><%= item.text %></p>
                     <% } %>
         
-                    <!-- Handle item.subtitle (with colored bullet or regular text) -->
-                    <% if (item.subtitle) { %>
+                    <% if (item.subtitle) { %>  <!-- Check for subtitle -->
                         <% if (typeof item.subtitle === 'object' && item.subtitle.coloredBullet) { %>
-                            <!-- Handle colored bullet list for subtitle -->
+                            <!-- Handle colored bullet list for single object -->
                             <ul class="colored-bullet">
                                 <% item.subtitle.paragraph.forEach(function(paragraphItem) { %>
                                     <li><%= paragraphItem %></li>
                                 <% }); %>
                             </ul>
                         <% } else { %>
-                            <!-- Handle regular subtitle -->
+                            <!-- Handle regular subtitle (non-colored bullet) -->
                             <p><%= item.subtitle %></p>
                         <% } %>
                     <% } %>
         
-                    <!-- Handle item.paragraph (Regular bullet list or array of items) -->
-                    <% if (Array.isArray(item.paragraph)) { %>
+                    <% if (Array.isArray(item.paragraph)) { %>  <!-- Check for item.paragraph -->
                         <ul>
                             <% item.paragraph.forEach(function(paragraphItem) { %>
                                 <li><%= paragraphItem %></li>
@@ -92,8 +82,8 @@
                         </ul>
                     <% } %>
                 </div>
-            <% }); %>
+
+            <% }); %>          
         </div>
-        
     </div>
 </section>
