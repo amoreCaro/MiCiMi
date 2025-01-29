@@ -44,39 +44,37 @@
         
       ]
     }) %>
-<%= _.template(require('./../includes/strategy.html').default)({
-    additionalClass: "strategy--with-heading strategy__grid-item-without-heading",
-    headingClass: "",
-    title: "Design Peer Reviews",
-    subtitle: "",  // This will be rendered as an empty string
+    <%= _.template(require('./../includes/strategy.html').default)({
+        additionalClass: "strategy--with-heading strategy__grid-item-without-heading",
+        headingClass: "",
+        title: "Design Peer Reviews",
+        subtitle: "",  // This will be rendered as an empty string
 
-    strategy: [
-        {   
-            title: "",
-            text: [
-                "There are design requirements uniquely attributed to data centre builds that must be considered. Our team will engage in an ongoing peer review of the design, including ensuring requirements are met, the design intent is followed through into the detailed design phase, and identifying any improvement opportunities.",
-                "The process ensures:"
-            ]
-        },
-         {   
-            title: "",
-            text: [
-            {
-                paragraph: [
-                    "A cost-effective way of guaranteeing the design is optimised for the client’s requirements.", 
-                    "Significant benefits from our experience and expertise.",
-                    "An auditable record where open issues are tracked.",
-                    "Any concerns raised are monitored and addressed as the design process continues."
-                ],
-                coloredBullet: true
-            },   
-                "We can also offer this as a standalone service to review concept designs."
-            ]
-        }
-    ]
-}) %>
-
-
+        strategy: [
+            {   
+                title: "",
+                text: [
+                    "There are design requirements uniquely attributed to data centre builds that must be considered. Our team will engage in an ongoing peer review of the design, including ensuring requirements are met, the design intent is followed through into the detailed design phase, and identifying any improvement opportunities.",
+                    "The process ensures:"
+                ]
+            },
+            {   
+                title: "",
+                text: [
+                {
+                    paragraph: [
+                        "A cost-effective way of guaranteeing the design is optimised for the client’s requirements.", 
+                        "Significant benefits from our experience and expertise.",
+                        "An auditable record where open issues are tracked.",
+                        "Any concerns raised are monitored and addressed as the design process continues."
+                    ],
+                    coloredBullet: true
+                },   
+                    "We can also offer this as a standalone service to review concept designs."
+                ]
+            }
+        ]
+    }) %>
 
     <%= _.template(require('./../includes/info.html').default)({
           additionalClass: "info--medium",

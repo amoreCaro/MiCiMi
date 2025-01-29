@@ -25,6 +25,9 @@
   &__btn {
     width: 100%;
   }
+  &__margin {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -60,6 +63,17 @@
       max-width: 932px;
       & p {
         margin-bottom: 32px;
+      }
+    }
+  }
+}
+.quote--double {
+  .quote {
+    height: 100%;
+    &__text {
+      max-width: 905px;
+      & p {
+        margin-bottom: 60px;
       }
     }
   }

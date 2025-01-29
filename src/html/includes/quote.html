@@ -1,16 +1,20 @@
-<section class="quote section <%=additionalClass%>" data-aos="fade-up" data-aos-duration="2000">
-
+<section class="quote section <%= additionalClass %>" data-aos="fade-up" data-aos-duration="2000">
   <div class="quote__container container">
     <div class="quote__content">
       <div class="quote__text h-content">
-        <%if (typeof text !== 'undefined') {%>
-          <p><%=text%></p>
-        <%}%>
+        <% if (Array.isArray(text)) { %>
+          <% text.forEach(function(item, index) { %>
+            <p><%= item %></p>
+          <% }) %>
+        <% } else if (typeof text !== 'undefined') { %>
+          <p><%= text %></p>
+        <% } %>
       </div>
       <div class="quote__btn">
-        <a href="#" class="btn <%=btn.class%>" target="_blank"><%=btn.text%></a>
+        <a href="#" class="btn <%= btn.class %>" target="_blank"><%= btn.text %></a>
       </div>
     </div>
   </div>
 </section>
+
 
