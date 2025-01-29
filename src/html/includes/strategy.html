@@ -44,7 +44,8 @@
                                 <%= line %>
                             </h3>
                             <% if (index < item.title.length - 1) { %> 
-                               
+                                <!-- Якщо це не останній елемент в масиві, додаємо відступ -->
+                                <br> <!-- або CSS клас для відступу -->
                             <% } %>
                         <% }); %>
                     <% } else if (item.title) { %> 
@@ -59,30 +60,17 @@
                     <% } else if (item.text) { %>
                         <p><%= item.text %></p>
                     <% } %>
-        
-                    <% if (item.subtitle) { %>  <!-- Check for subtitle -->
-                        <% if (typeof item.subtitle === 'object' && item.subtitle.coloredBullet) { %>
-                            <!-- Handle colored bullet list for single object -->
-                            <ul class="colored-bullet">
-                                <% item.subtitle.paragraph.forEach(function(paragraphItem) { %>
+            
+                    <% if (Array.isArray(item.paragraph)) { %>
+                        <!-- <p> -->
+                            <ul>
+                                <% item.paragraph.forEach(function(paragraphItem) { %>
                                     <li><%= paragraphItem %></li>
                                 <% }); %>
                             </ul>
-                        <% } else { %>
-                            <!-- Handle regular subtitle (non-colored bullet) -->
-                            <p><%= item.subtitle %></p>
-                        <% } %>
-                    <% } %>
-        
-                    <% if (Array.isArray(item.paragraph)) { %>  <!-- Check for item.paragraph -->
-                        <ul>
-                            <% item.paragraph.forEach(function(paragraphItem) { %>
-                                <li><%= paragraphItem %></li>
-                            <% }); %>
-                        </ul>
+                        <!-- </p> -->
                     <% } %>
                 </div>
-
             <% }); %>          
         </div>
     </div>

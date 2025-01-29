@@ -13,7 +13,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;  
-    justify-content: center;  
+    justify-content: start;  
     gap: 12px;
     row-gap: 24px; 
     & h3 {
@@ -37,5 +37,11 @@
         width: 100%;
         object-fit: contain;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .template__list {
+    justify-content: center;  
   }
 }
