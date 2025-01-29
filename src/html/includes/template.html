@@ -4,21 +4,33 @@
   data-aos-duration="2000"
 >
   <div class="template__container container">
+    <% if (lagreHeading || subtitle) { %>
+      <div class="template__heading">
+        <% if (lagreHeading) { %>
+          <h2><%= lagreHeading %></h2>
+        <% } %>
+        
+        <% if (subtitle) { %>
+          <p><%= subtitle %></p>
+        <% } %>
+      </div>
+    <% } %>
+
     <div class="template__title">
-      <h2><%= title %></h2>
+      <h3><%= title %></h3>
     </div>
     <div class="template__list">
-        <% _.each(items, function(item) { %>
-          <div class="template__item">
-            <div class="template__item-image">
-                <img src="<%= item.image %>" alt="<%= item.title %>">
-            </div>
-              <div class="template__item-text">
-                  <h3><%= item.title %></h3>
-                  <p><%= item.subtitle %></p>
-              </div>
+      <% _.each(items, function(item) { %>
+        <div class="template__item">
+          <div class="template__item-image">
+            <img src="<%= item.image %>" alt="<%= item.title %>" />
           </div>
-        <% }); %>
-      </div>      
-  </div> 
+          <div class="template__item-text">
+            <h3><%= item.title %></h3>
+            <p><%= item.subtitle %></p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
 </section>

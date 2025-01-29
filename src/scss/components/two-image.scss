@@ -136,3 +136,13 @@
     left: -30px;
   }
 }
+
+.two-image--about {
+  .two-image__container {
+    overflow: visible;
+  }
+  .two-image__right img {
+    margin-bottom: 32px;
+  }
+}
+

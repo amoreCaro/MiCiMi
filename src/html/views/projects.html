@@ -1,4 +1,4 @@
-<% var data = { title: "Project Template" }; %>
+<% var data = { title: "Projects" }; %>
 <%=_.template(require('./../includes/header.html').default)(data) %>
 <div class="page__main">
     <%= _.template(require('./../includes/banner.html').default)({
@@ -24,8 +24,10 @@
       }) %>
 
     <%= _.template(require('./../includes/template.html').default)({
-        additionalClass: "",
-        title: "Construction Management",
+        additionalClass: "template--without-heading",
+        lagreHeading: "Construction Management",
+        subtitle: "",
+        title: "",
         items: [
           {
             title: "Campus Dub 4",
@@ -71,26 +73,28 @@
         ]
       }) %>
       <%= _.template(require('./../includes/template.html').default)({
-        additionalClass: "",
-        title: "Project Management",
+        additionalClass: "template--without-heading",
+        lagreHeading: "Project Management",
+        subtitle: "",
+        title: "",
         items: [
           {
-            title: "BAI Communications",
+            title: "<span>BAI</span> Communications",
             subtitle: "London",
             image: "img/project-management-template__image-1.png"
           },
           {
-            title: "Compass Datacentres",
+            title: "<span>Compass</span> Datacentres",
             subtitle: "EMEA, Israel",
             image: "img/project-management-template__image-2.png"
           },
           {
-            title: "Digital Dagenham",
+            title: "<span>Digital</span> Dagenham",
             subtitle: "Dagenham, Essex",
             image: "img/project-management-template__image-3.png"
           },
           {
-            title: "Campus, DC-2",
+            title: "<span>Campus</span>, DC-2",
             subtitle: "Hemel Hempstead, Hertfordshire",
             image: "img/project-management-template__image-4.png"
           }
